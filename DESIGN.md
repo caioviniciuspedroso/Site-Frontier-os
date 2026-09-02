@@ -227,7 +227,7 @@ A rota é o componente-assinatura. Um traço vermelho fino organiza exatamente q
 
 ### Wave Engine
 
-O hero usa um canvas 2D em tela cheia atrás da copy, sem moldura ou cartão. Três fitas volumétricas combinam superfícies translúcidas e filamentos para formar uma massa orgânica de marfim, dourado quente e vermelho com composição aditiva; o loop pausa fora da tela ou quando a aba fica oculta. A versão com movimento reduzido desenha um único quadro estático.
+O hero usa um canvas 2D em tela cheia atrás da copy, sem moldura ou cartão. Três fitas volumétricas combinam superfícies translúcidas e filamentos para formar uma massa orgânica de marfim, dourado quente e vermelho com composição aditiva. A geometria é rasterizada uma única vez com orçamento de pixels adaptativo; o movimento contínuo vem de um deslocamento lento composto pela GPU, que pausa fora da tela ou quando a aba fica oculta. Em `prefers-reduced-motion`, a composição permanece estática.
 
 ### Brand Sequence
 
