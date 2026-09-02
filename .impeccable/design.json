@@ -169,6 +169,21 @@
           "oklch(95% 0.03 55)"
         ]
       },
+      "placeholder-readable": {
+        "role": "neutral",
+        "displayName": "Placeholder Legível",
+        "canonical": "#AA9E91",
+        "tonalRamp": [
+          "oklch(15% 0.02 65)",
+          "oklch(25% 0.02 65)",
+          "oklch(35% 0.02 65)",
+          "oklch(45% 0.02 65)",
+          "oklch(55% 0.02 65)",
+          "oklch(65% 0.02 65)",
+          "oklch(80% 0.02 65)",
+          "oklch(95% 0.02 65)"
+        ]
+      },
       "feedback-soft-red": {
         "role": "neutral",
         "displayName": "Vermelho Suave de Feedback",
@@ -231,14 +246,14 @@
         "purpose": "Desenha a linha vermelha sob links de navegação."
       },
       {
-        "name": "route-flow",
-        "value": "11s linear infinite",
-        "purpose": "Faz o tracejado percorrer continuamente a rota operacional."
+        "name": "hero-reveal",
+        "value": "1.25s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Revela imagem, rota e rótulos uma vez e preserva o hero estável depois da entrada."
       },
       {
-        "name": "scroll-cue",
-        "value": "1.8s ease-in-out infinite",
-        "purpose": "Deslocamento vertical discreto do convite para explorar."
+        "name": "film-scroll-scrub",
+        "value": "requestAnimationFrame + scroll progress",
+        "purpose": "Liga frame, escala, recorte e deslocamento da faixa cinematográfica ao progresso real da rolagem."
       },
       {
         "name": "activity-spin",
@@ -286,11 +301,11 @@
       "css": ".ds-service-row { display:grid; grid-template-columns:54px minmax(120px,.7fr) minmax(220px,1.3fr) 34px; align-items:center; gap:24px; min-height:116px; padding:0 18px; border-bottom:1px solid rgb(255 248 239 / 38%); background:var(--frontier-red, #9c311f); color:#fff8ef; transition:color 180ms ease, background 180ms ease; } .ds-service-number { font-family:var(--font-body, sans-serif); font-size:.7rem; font-variant-numeric:tabular-nums; font-weight:700; letter-spacing:.14em; } .ds-service-row h3 { margin:0; font-family:var(--font-display, 'Arial Narrow', sans-serif); font-size:2.4rem; font-weight:600; line-height:.94; letter-spacing:-.02em; text-transform:uppercase; } .ds-service-row p { max-width:58ch; margin:0; font-family:var(--font-body, sans-serif); font-size:.94rem; line-height:1.6; } .ds-service-row svg { width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:2; } .ds-service-row:hover { background:#fff8ef; color:#21140f; } .ds-service-row:focus-within { outline:2px solid #fff8ef; outline-offset:4px; }"
     },
     {
-      "name": "Etapa do Fluxo",
-      "kind": "card",
-      "description": "Célula sem elevação que conecta uma etapa operacional a seu resultado e às capacidades envolvidas.",
-      "html": "<article class=\"ds-flow-stage\"><div class=\"ds-flow-marker\"><span>02</span><svg viewBox=\"0 0 40 18\" aria-hidden=\"true\"><path d=\"M1 9h36m-6-6 6 6-6 6\"/></svg></div><h3>AQUISIÇÃO</h3><p>A atenção certa vira uma oportunidade rastreável.</p><small>TRÁFEGO ESTRATÉGICO · LANDING PAGES · ESTRUTURA DE CONVERSÃO</small></article>",
-      "css": ".ds-flow-stage { min-height:390px; padding:34px 30px 36px; border-right:1px solid rgb(24 20 17 / 26%); border-radius:0; background:var(--frontier-ivory, #e6dbcd); color:#181411; font-family:var(--font-body, sans-serif); } .ds-flow-marker { display:flex; align-items:center; justify-content:space-between; min-height:44px; color:var(--frontier-red, #9c311f); font-size:.7rem; font-variant-numeric:tabular-nums; font-weight:700; letter-spacing:.14em; } .ds-flow-marker svg { width:38px; height:18px; fill:none; stroke:currentColor; stroke-width:1.5; } .ds-flow-stage h3 { margin:96px 0 0; font-family:var(--font-display, 'Arial Narrow', sans-serif); font-size:3.25rem; font-weight:600; line-height:.9; text-transform:uppercase; } .ds-flow-stage p { max-width:28ch; min-height:78px; margin:24px 0 0; font-size:.98rem; line-height:1.55; } .ds-flow-stage small { display:block; margin-top:30px; color:#655a51; font-size:.72rem; line-height:1.6; } .ds-flow-stage:hover { background:#fff8ef; } .ds-flow-stage:focus-within { outline:2px solid var(--frontier-red, #9c311f); outline-offset:4px; }"
+      "name": "Sistema Conectado",
+      "kind": "custom",
+      "description": "Diagrama radial acessível que torna visível como oito capacidades compartilham o mesmo núcleo operacional.",
+      "html": "<section class=\"ds-connected\"><h2>Tudo conectado.</h2><div class=\"ds-orbit\" role=\"img\" aria-label=\"Site, SEO, formulário, agente de IA, CRM, automação, dashboard e sistema conectados à Frontier OS\"><span>SITE</span><span>SEO</span><strong>FRONTIER OS</strong><span>CRM</span><span>DASHBOARD</span></div></section>",
+      "css": ".ds-connected { padding:72px; border-block:1px solid rgb(230 219 205 / 13%); background:#050505; color:var(--frontier-ivory, #e6dbcd); } .ds-connected h2 { margin:0; font:500 clamp(3rem,5.2vw,5.6rem)/1 var(--font-body, sans-serif); letter-spacing:-.04em; text-align:center; } .ds-orbit { position:relative; display:grid; grid-template-columns:repeat(5,1fr); align-items:center; gap:16px; max-width:720px; min-height:360px; margin:64px auto 0; border:1px dashed rgb(156 49 31 / 30%); border-radius:50%; } .ds-orbit span,.ds-orbit strong { display:grid; place-items:center; min-height:58px; border:1px solid rgb(230 219 205 / 20%); background:#0a0a0a; font:700 .72rem/1.2 var(--font-body, sans-serif); text-align:center; } .ds-orbit strong { min-height:92px; color:#d2462e; }"
     },
     {
       "name": "Trilho de Etapas",
@@ -307,18 +322,18 @@
       "css": ".ds-solution-rail { width:286px; border-left:1px solid rgb(230 219 205 / 17%); background:rgb(5 5 5 / 92%); color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-body, sans-serif); } .ds-solution-rail strong { display:flex; align-items:center; min-height:54px; padding:0 22px; border-bottom:1px solid rgb(230 219 205 / 15%); color:rgb(230 219 205 / 58%); font-size:.58rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; } .ds-solution-rail ol { margin:0; padding:0; list-style:none; } .ds-solution-rail li { display:flex; align-items:center; gap:12px; min-height:58px; padding:4px 18px; border-bottom:1px solid rgb(230 219 205 / 10%); color:rgb(230 219 205 / 77%); font-size:.68rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; transition:color 180ms ease, background 180ms ease; } .ds-solution-rail li::before { flex:0 0 13px; width:13px; height:1px; content:''; background:#d2462e; } .ds-solution-rail li:hover { background:rgb(230 219 205 / 5%); color:#e6dbcd; }"
     },
     {
-      "name": "Campo Sublinhado",
+      "name": "Campo Escuro",
       "kind": "input",
-      "refersTo": "input-underline",
-      "description": "Campo transparente sobre marfim, com rótulo técnico e uma única linha estrutural.",
+      "refersTo": "input-dark",
+      "description": "Campo escuro com rótulo sempre visível, borda técnica e contraste preservado.",
       "html": "<label class=\"ds-field\"><span>EMPRESA</span><input type=\"text\" placeholder=\"Nome da sua empresa\" /></label>",
-      "css": ".ds-field { display:flex; flex-direction:column; gap:8px; padding:8px 0; background:var(--frontier-ivory, #e6dbcd); color:#181411; font-family:var(--font-body, sans-serif); } .ds-field span { font-size:.78rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; } .ds-field input { width:100%; min-height:54px; padding:10px 2px; border:0; border-bottom:1px solid rgb(24 20 17 / 46%); border-radius:0; background:transparent; color:#181411; font:400 1rem/1.7 var(--font-body, sans-serif); box-shadow:none; } .ds-field input::placeholder { color:#655a51; opacity:1; } .ds-field input:hover { border-bottom-color:#181411; } .ds-field input:focus-visible { outline:2px solid var(--frontier-red, #9c311f); outline-offset:4px; }"
+      "css": ".ds-field { display:flex; flex-direction:column; gap:8px; color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-body, sans-serif); } .ds-field span { font-size:.72rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; } .ds-field input { width:100%; min-height:54px; padding:10px 14px; border:1px solid rgb(230 219 205 / 18%); border-radius:3px; background:#0d0d0d; color:var(--frontier-ivory, #e6dbcd); font:400 1rem/1.7 var(--font-body, sans-serif); box-shadow:none; } .ds-field input::placeholder { color:#aa9e91; opacity:1; } .ds-field input:hover { border-color:rgb(230 219 205 / 34%); } .ds-field input:focus-visible { border-color:var(--frontier-ivory, #e6dbcd); outline:2px solid var(--frontier-ivory, #e6dbcd); outline-offset:4px; }"
     },
     {
       "name": "Painel de Briefing",
       "kind": "card",
       "refersTo": "brief-result",
-      "description": "Resultado escuro do formulário com texto amplo e ação secundária de cópia.",
+      "description": "Resultado escuro do formulário com confirmação explícita, texto amplo e ação secundária de cópia.",
       "html": "<section class=\"ds-brief-result\"><p>Olá, Frontier Vision. Quero entender como o Frontier OS pode conectar nossa operação digital.</p><button type=\"button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"9\" y=\"9\" width=\"10\" height=\"10\"/><path d=\"M5 15H4V5h10v1\"/></svg>COPIAR BRIEFING</button></section>",
       "css": ".ds-brief-result { padding:42px; border-radius:0; background:#181411; color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-body, sans-serif); } .ds-brief-result p { margin:0; font-size:1.2rem; line-height:1.75; } .ds-brief-result button { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:56px; margin-top:34px; padding:0 22px; border:1px solid rgb(230 219 205 / 42%); border-radius:0; background:transparent; color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-display, 'Arial Narrow', sans-serif); font-size:1rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:background 180ms ease, color 180ms ease; } .ds-brief-result button svg { width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.7; } .ds-brief-result button:hover { background:var(--frontier-ivory, #e6dbcd); color:#181411; } .ds-brief-result button:focus-visible { outline:2px solid var(--frontier-ivory, #e6dbcd); outline-offset:4px; } .ds-brief-result button:active { opacity:.72; }"
     },
@@ -326,7 +341,7 @@
       "name": "Controle da Faixa Cinematográfica",
       "kind": "button",
       "refersTo": "button-outline",
-      "description": "Controle quadrado e compacto sobre a mídia para pausar ou reproduzir a animação de marca.",
+      "description": "Controle quadrado e compacto sobre a mídia para pausar ou ativar o movimento ligado à rolagem.",
       "html": "<div class=\"ds-film-meta\"><span>FRONTIER VISION / MOTION STUDY</span><button type=\"button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m8 5 11 7-11 7z\"/></svg>REPRODUZIR</button></div>",
       "css": ".ds-film-meta { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:88px; padding:16px 24px; border:1px solid rgb(230 219 205 / 20%); background:var(--frontier-red, #9c311f); color:var(--frontier-ivory, #e6dbcd); } .ds-film-meta > span { font-family:var(--font-body, sans-serif); font-size:.63rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; } .ds-film-meta button { display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:0 14px; border:1px solid rgb(230 219 205 / 52%); border-radius:0; background:rgb(5 5 5 / 72%); color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-body, sans-serif); font-size:.65rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:background 180ms ease; } .ds-film-meta button svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:1.8; } .ds-film-meta button:hover { background:#050505; } .ds-film-meta button:focus-visible { outline:2px solid var(--frontier-ivory, #e6dbcd); outline-offset:4px; } .ds-film-meta button:active { opacity:.72; }"
     }

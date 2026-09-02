@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import type { CSSProperties } from 'react';
-import { ArrowDown, ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { ProjectBriefForm } from '@/components/project-brief-form';
 import { CinematicStrip } from '@/components/cinematic-strip';
+import { ConnectedSystem } from '@/components/connected-system';
 
 const stages = ['Presença', 'Aquisição', 'Operação', 'Inteligência'];
 
@@ -32,29 +33,6 @@ const heroServices = [
   'Tráfego estratégico',
   'Estrutura digital',
   'Dashboards',
-];
-
-const flow = [
-  {
-    title: 'Presença',
-    statement: 'Sua empresa é encontrada, compreendida e desejada.',
-    detail: 'Sites premium · E-commerce · SEO · Google Meu Negócio',
-  },
-  {
-    title: 'Aquisição',
-    statement: 'A atenção certa vira uma oportunidade rastreável.',
-    detail: 'Tráfego estratégico · Landing pages · Estrutura de conversão',
-  },
-  {
-    title: 'Operação',
-    statement: 'O lead entra em um processo que o time consegue executar.',
-    detail: 'CRM · Automações · Sistemas · Integrações',
-  },
-  {
-    title: 'Inteligência',
-    statement: 'Dados e IA devolvem contexto para decidir o próximo movimento.',
-    detail: 'Agentes de IA · Dashboards · Análise contínua',
-  },
 ];
 
 const process = [
@@ -146,27 +124,17 @@ export default function Home() {
         </ol>
       </section>
 
-      <section className="flow-section" aria-labelledby="flow-title">
-        <div className="flow-intro">
-          <h2 id="flow-title">Da atenção à decisão.</h2>
-          <p>Quatro frentes, uma passagem contínua. Cada entrega melhora a próxima etapa e devolve informação para o início do ciclo.</p>
-        </div>
-        <ol className="flow-list">
-          {flow.map((item, index) => (
-            <li key={item.title}>
-              <div className="flow-marker"><span>{String(index + 1).padStart(2, '0')}</span>{index < flow.length - 1 ? <ArrowRight aria-hidden="true" /> : null}</div>
-              <h3>{item.title}</h3><p>{item.statement}</p><small>{item.detail}</small>
-            </li>
-          ))}
-        </ol>
-      </section>
+      <ConnectedSystem />
 
       <section className="film-section" aria-labelledby="film-title">
-        <div className="film-copy">
-          <h2 id="film-title">Uma identidade. Um fluxo. Uma operação.</h2>
-          <p>O digital deixa de ser um conjunto de fornecedores e começa a funcionar como infraestrutura: coordenado, mensurável e pronto para evoluir.</p>
+        <div className="film-sticky" data-film-sticky>
+          <div className="film-copy">
+            <h2 id="film-title">Uma identidade. Um fluxo. Uma operação.</h2>
+            <p>Role para percorrer a marca em movimento. A mesma lógica organiza sua estrutura digital: cada etapa avança conectada à próxima.</p>
+          </div>
+          <CinematicStrip />
+          <div className="film-progress" aria-hidden="true"><span /></div>
         </div>
-        <CinematicStrip />
       </section>
 
       <section className="process-section" id="processo" aria-labelledby="process-title">
@@ -182,11 +150,13 @@ export default function Home() {
       </section>
 
       <section className="contact-section" id="contato" aria-labelledby="contact-title">
-        <div className="contact-heading">
-          <h2 id="contact-title">Pronto para operar como sistema?</h2>
-          <p>Conte o principal gargalo. A conversa começa pelo que precisa funcionar, não por um pacote pronto.</p>
+        <div className="contact-shell">
+          <div className="contact-heading">
+            <h2 id="contact-title">Conte o que precisa ser resolvido.</h2>
+            <p>Não precisa chegar com o projeto pronto. Descreva o problema e a gente organiza o caminho, define as prioridades e conecta o que fizer sentido.</p>
+          </div>
+          <ProjectBriefForm />
         </div>
-        <ProjectBriefForm />
       </section>
 
       <footer className="site-footer">

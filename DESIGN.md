@@ -13,6 +13,7 @@ colors:
   warm-ink: "#181411"
   muted-warm: "#B9AD9E"
   muted-earth: "#655A51"
+  placeholder-readable: "#AA9E91"
   feedback-soft-red: "#F3C4B9"
 typography:
   display:
@@ -47,6 +48,7 @@ typography:
     letterSpacing: "0.12em"
 rounded:
   none: "0"
+  technical: "3px"
 spacing:
   xs: "8px"
   sm: "12px"
@@ -74,12 +76,12 @@ components:
     rounded: "{rounded.none}"
     padding: "0 14px"
     height: "44px"
-  input-underline:
-    backgroundColor: "transparent"
-    textColor: "{colors.warm-ink}"
+  input-dark:
+    backgroundColor: "#0D0D0D"
+    textColor: "{colors.warm-ivory}"
     typography: "{typography.body}"
-    rounded: "{rounded.none}"
-    padding: "10px 2px"
+    rounded: "3px"
+    padding: "10px 14px"
     height: "54px"
   brief-result:
     backgroundColor: "{colors.warm-ink}"
@@ -127,9 +129,9 @@ A paleta combina matéria escura, papel aquecido e sinais vermelhos precisos; o 
 - **Preto Mate:** palco dominante, fundo do hero, cabeçalho e rodapé.
 - **Preto de Superfície:** camada discreta para superfícies escuras funcionais.
 - **Grafite Frontier:** matéria de apoio e bordas escuras sem competir com o preto principal.
-- **Tinta Quente:** texto e painel de resultado sobre capítulos em marfim.
+- **Tinta Quente:** painel de resultado e superfícies de contraste dentro dos capítulos escuros.
 - **Neutro Quente Atenuado:** texto secundário em superfícies escuras.
-- **Terra Atenuada:** ajuda, placeholder e detalhe secundário sobre marfim.
+- **Terra Atenuada:** apoio histórico da paleta; os placeholders escuros usam uma variação mais clara para garantir legibilidade.
 - **Vermelho Suave de Feedback:** mensagem de erro legível dentro de superfícies escuras.
 
 ### Named Rules
@@ -163,7 +165,7 @@ A paleta combina matéria escura, papel aquecido e sinais vermelhos precisos; o 
 
 O sistema usa uma grade editorial de alta densidade com trilhos laterais, faixas inferiores, listas indexadas e capítulos em campos contínuos. No hero desktop, o cabeçalho tem três colunas, o texto ocupa o quadrante inferior esquerdo, a rota resolve quatro destinos à direita e um trilho de serviços fecha a borda; a faixa inferior ancora o identificador do sistema e as quatro etapas.
 
-As seções principais usam respiro vertical fluido e margem lateral responsiva. Introduções combinam uma coluna dominante de título com uma coluna menor de explicação; listas usam quatro colunas quando a sequência é essencial. Em até 980px, navegação central e trilho de serviços saem de cena, grades de quatro etapas viram duas colunas e as introduções empilham. Em até 640px, os capítulos usam margem lateral de 20px, as sequências viram uma coluna e a ação principal ocupa toda a largura. Os elementos desaparecem apenas quando sua função já está coberta pela narrativa, nunca para esconder conteúdo essencial.
+As seções principais usam respiro vertical fluido e margem lateral responsiva. Introduções combinam uma coluna dominante de título com uma coluna menor de explicação; listas usam quatro colunas quando a sequência é essencial. O capítulo “Tudo conectado” usa um núcleo radial com oito capacidades e uma explicação lateral, enquanto o contato organiza copy e formulário dentro de um único painel escuro dividido por regra. Em até 980px, navegação central e trilho de serviços saem de cena, o diagrama empilha com sua explicação e a faixa cinematográfica deixa de ser fixa. Em até 640px, os capítulos usam margem lateral de 20px, as sequências viram uma coluna e a ação principal ocupa toda a largura. Os elementos desaparecem apenas quando sua função já está coberta pela narrativa, nunca para esconder conteúdo essencial.
 
 **The Route Before Grid Rule.** Toda grade deve reforçar uma sequência, um índice ou uma relação operacional; não use colunas apenas para produzir variedade visual.
 
@@ -184,7 +186,7 @@ O sistema é plano por padrão e não usa sombras de cartão. Profundidade vem d
 
 ## Shapes
 
-Cantos são quadrados em botões, campos, painéis e controles. A geometria recorrente vem de linhas de 1px, divisórias, cantos de registro de 18px, trilhos horizontais e verticais e pequenos traços vermelhos. Curvas pertencem à rota que contorna obstáculos e conecta etapas; não amaciam containers. Recortes de mídia ficam presos a molduras parciais e bordas abertas, como pranchas técnicas em movimento.
+Cantos são quadrados em botões, painéis e controles; campos podem usar o raio técnico de 3px para separar a área editável sem parecer um cartão. A geometria recorrente vem de linhas de 1px, divisórias, cantos de registro de 18px, trilhos horizontais e verticais e pequenos traços vermelhos. Curvas pertencem à rota que contorna obstáculos e conecta etapas; não amaciam containers. Recortes de mídia ficam presos a molduras parciais e bordas abertas, como pranchas técnicas em movimento.
 
 **The Square Instrument Rule.** A forma padrão é reta e registrável; qualquer curva precisa descrever movimento, não decoração.
 
@@ -207,8 +209,8 @@ Cantos são quadrados em botões, campos, painéis e controles. A geometria reco
 
 ### Inputs / Fields
 
-- **Style:** fundo transparente, apenas sublinhado de 1px, cantos retos e Manrope em tamanho de corpo.
-- **Focus:** contorno global de 2px em vermelho sobre superfícies claras, com offset de 4px; o campo mantém sua linha de base.
+- **Style:** superfície preta elevada por contraste tonal, borda de 1px, raio técnico de 3px e Manrope em tamanho de corpo.
+- **Focus:** borda em marfim integral com contorno global de 2px; rótulos permanecem visíveis e não dependem do placeholder.
 - **Error / Disabled:** erro usa texto vermelho suave; espera reduz opacidade do controle sem alterar sua geometria.
 
 ### Navigation
@@ -221,11 +223,11 @@ Listas de serviços e processos funcionam como tabelas editoriais: número tabul
 
 ### Operational Route
 
-A rota é o componente-assinatura. Um traço vermelho fino e tracejado parte do núcleo Frontier e resolve exatamente quatro destinos — Presença, Aquisição, Operação e Inteligência — com halo técnico discreto e animação linear contínua. O conteúdo permanece compreensível sem movimento, e `prefers-reduced-motion` reduz a animação a uma única passagem praticamente instantânea.
+A rota é o componente-assinatura. Um traço vermelho fino e tracejado parte do núcleo Frontier e resolve exatamente quatro destinos — Presença, Aquisição, Operação e Inteligência — com halo técnico discreto. No hero, imagem, rota e rótulos entram uma única vez e permanecem estáveis; o diagrama radial posterior explica a conexão entre oito capacidades com texto equivalente fora do SVG. Em `prefers-reduced-motion`, tudo surge já no estado final.
 
 ### Cinematic Strip
 
-A mídia ocupa uma faixa horizontal presa à borda da seção, com moldura parcial interna, metadado em caixa alta e controle de reprodução quadrado. O vídeo usa crop responsivo; em redução de movimento, inicia pausado e continua acessível pelo controle.
+A mídia ocupa uma faixa horizontal presa à borda da seção, com moldura parcial interna, metadado em caixa alta e controle quadrado. No desktop, a seção permanece fixa por uma única passagem e a rolagem controla frame, escala, recorte e deslocamento; o progresso é indicado por uma regra vertical vermelha. Em telas compactas, a faixa volta ao fluxo normal, mas o vídeo ainda responde à rolagem. Em redução de movimento, o quadro fica pausado em um estado representativo.
 
 ## Do's and Don'ts
 
