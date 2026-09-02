@@ -3,46 +3,66 @@
 import { useEffect, useRef } from 'react';
 
 type Ribbon = {
+  start: number;
+  end: number;
   base: number;
   drift: number;
   amplitude: number;
   frequency: number;
   phase: number;
-  spread: number;
-  strands: number;
-  colors: [string, string, string];
+  thickness: number;
+  speed: number;
+  shells: number;
+  filaments: number;
+  glow: string;
+  colors: [string, string, string, string];
 };
 
 const ribbons: Ribbon[] = [
   {
-    base: 0.48,
-    drift: 0.12,
-    amplitude: 0.105,
-    frequency: 5.2,
+    start: 0.22,
+    end: 1.18,
+    base: 0.22,
+    drift: 0.33,
+    amplitude: 0.12,
+    frequency: 5.1,
+    phase: 2.1,
+    thickness: 0.1,
+    speed: 0.00017,
+    shells: 5,
+    filaments: 16,
+    glow: 'rgba(210,70,46,0.72)',
+    colors: ['rgba(76,16,8,0)', 'rgba(156,49,31,0.2)', 'rgba(210,70,46,0.76)', 'rgba(76,16,8,0)'],
+  },
+  {
+    start: -0.16,
+    end: 1.12,
+    base: 0.18,
+    drift: 0.48,
+    amplitude: 0.14,
+    frequency: 5.8,
     phase: 0,
-    spread: 84,
-    strands: 30,
-    colors: ['rgba(230,219,205,0)', 'rgba(255,248,239,0.92)', 'rgba(230,219,205,0)'],
+    thickness: 0.205,
+    speed: 0.00013,
+    shells: 9,
+    filaments: 38,
+    glow: 'rgba(255,232,198,0.86)',
+    colors: ['rgba(106,71,43,0)', 'rgba(230,194,150,0.54)', 'rgba(255,248,239,0.96)', 'rgba(132,78,45,0)'],
   },
   {
-    base: 0.61,
-    drift: -0.08,
-    amplitude: 0.075,
-    frequency: 4.1,
-    phase: 2.4,
-    spread: 62,
-    strands: 24,
-    colors: ['rgba(156,49,31,0)', 'rgba(210,70,46,0.8)', 'rgba(156,49,31,0)'],
-  },
-  {
-    base: 0.34,
-    drift: 0.04,
-    amplitude: 0.052,
-    frequency: 6.4,
-    phase: 4.7,
-    spread: 38,
-    strands: 15,
-    colors: ['rgba(156,49,31,0)', 'rgba(185,59,38,0.42)', 'rgba(156,49,31,0)'],
+    start: -0.08,
+    end: 1.1,
+    base: 0.62,
+    drift: -0.02,
+    amplitude: 0.08,
+    frequency: 4.3,
+    phase: 3.4,
+    thickness: 0.075,
+    speed: -0.0001,
+    shells: 4,
+    filaments: 13,
+    glow: 'rgba(185,59,38,0.5)',
+    colors: ['rgba(80,18,10,0)', 'rgba(126,34,21,0.16)', 'rgba(185,59,38,0.52)', 'rgba(80,18,10,0)'],
   },
 ];
 
@@ -64,33 +84,66 @@ export function HeroWave() {
     let pageVisible = !document.hidden;
     let lastPaint = 0;
 
-    const drawRibbon = (ribbon: Ribbon, time: number) => {
-      const gradient = context.createLinearGradient(0, 0, width, 0);
-      gradient.addColorStop(0, ribbon.colors[0]);
-      gradient.addColorStop(0.46, ribbon.colors[1]);
-      gradient.addColorStop(1, ribbon.colors[2]);
-      context.strokeStyle = gradient;
-      context.shadowColor = ribbon.colors[1];
-      context.shadowBlur = 12;
+    const point = (ribbon: Ribbon, progress: number, time: number, offset = 0) => {
+      const envelope = Math.sin(Math.PI * progress) ** 0.66;
+      const breath = 0.78 + Math.sin(progress * 7.4 - time * ribbon.speed * 0.72 + ribbon.phase) * 0.22;
+      const flow = Math.sin(progress * ribbon.frequency + time * ribbon.speed + ribbon.phase);
+      const fold = Math.sin(progress * 12.6 - time * ribbon.speed * 0.62 + ribbon.phase * 1.7) * 0.28;
+      const x = width * (ribbon.start + (ribbon.end - ribbon.start) * progress);
+      const center = height * (ribbon.base + progress * ribbon.drift)
+        + (flow + fold) * height * ribbon.amplitude * envelope;
+      const halfWidth = height * ribbon.thickness * envelope * breath;
+      return { x, y: center + halfWidth * offset };
+    };
 
-      for (let strand = 0; strand < ribbon.strands; strand += 1) {
-        const strandPosition = ribbon.strands === 1 ? 0 : strand / (ribbon.strands - 1) - 0.5;
-        context.globalAlpha = 0.14 + (1 - Math.abs(strandPosition) * 1.6) * 0.38;
-        context.lineWidth = strand % 7 === 0 ? 1.55 : 0.72;
+    const drawRibbon = (ribbon: Ribbon, time: number) => {
+      const gradient = context.createLinearGradient(width * ribbon.start, height * 0.08, width * ribbon.end, height * 0.86);
+      gradient.addColorStop(0, ribbon.colors[0]);
+      gradient.addColorStop(0.24, ribbon.colors[1]);
+      gradient.addColorStop(0.58, ribbon.colors[2]);
+      gradient.addColorStop(1, ribbon.colors[3]);
+
+      context.shadowColor = ribbon.glow;
+      context.shadowBlur = 26;
+
+      for (let shell = ribbon.shells - 1; shell >= 0; shell -= 1) {
+        const inset = ribbon.shells === 1 ? 0 : shell / (ribbon.shells - 1);
+        const shellWidth = 1 - inset * 0.72;
         context.beginPath();
 
-        for (let step = 0; step <= 92; step += 1) {
-          const progress = step / 92;
-          const envelope = Math.sin(Math.PI * progress) ** 0.72;
-          const flow = Math.sin(progress * ribbon.frequency + time * 0.00034 + ribbon.phase);
-          const detail = Math.sin(progress * 13.2 - time * 0.00021 + ribbon.phase * 1.7) * 0.34;
-          const x = progress * width;
-          const y = height * (ribbon.base + progress * ribbon.drift)
-            + (flow + detail) * height * ribbon.amplitude
-            + strandPosition * ribbon.spread * envelope;
+        for (let step = 0; step <= 120; step += 1) {
+          const progress = step / 120;
+          const current = point(ribbon, progress, time + shell * 38, -shellWidth);
+          if (step === 0) context.moveTo(current.x, current.y);
+          else context.lineTo(current.x, current.y);
+        }
 
-          if (step === 0) context.moveTo(x, y);
-          else context.lineTo(x, y);
+        for (let step = 120; step >= 0; step -= 1) {
+          const progress = step / 120;
+          const current = point(ribbon, progress, time + shell * 38, shellWidth);
+          context.lineTo(current.x, current.y);
+        }
+
+        context.closePath();
+        context.fillStyle = gradient;
+        context.globalAlpha = 0.055 + (1 - inset) * 0.085;
+        context.fill();
+      }
+
+      context.shadowBlur = 10;
+      context.strokeStyle = gradient;
+      for (let filament = 0; filament < ribbon.filaments; filament += 1) {
+        const position = ribbon.filaments === 1 ? 0 : filament / (ribbon.filaments - 1) * 1.84 - 0.92;
+        context.globalAlpha = 0.13 + (1 - Math.abs(position)) * 0.35;
+        context.lineWidth = filament % 9 === 0 ? 1.3 : 0.58;
+        context.beginPath();
+
+        for (let step = 0; step <= 120; step += 1) {
+          const progress = step / 120;
+          const ripple = Math.sin(progress * 16 + filament * 0.43 - time * ribbon.speed * 0.82) * 0.06;
+          const current = point(ribbon, progress, time + filament * 7, position + ripple);
+          if (step === 0) context.moveTo(current.x, current.y);
+          else context.lineTo(current.x, current.y);
         }
 
         context.stroke();
@@ -108,7 +161,7 @@ export function HeroWave() {
       context.globalAlpha = 1;
       context.shadowBlur = 0;
 
-      const vignette = context.createRadialGradient(width * 0.48, height * 0.52, width * 0.08, width * 0.5, height * 0.5, width * 0.72);
+      const vignette = context.createRadialGradient(width * 0.5, height * 0.48, width * 0.08, width * 0.5, height * 0.5, width * 0.74);
       vignette.addColorStop(0, 'rgba(5,5,5,0)');
       vignette.addColorStop(0.68, 'rgba(5,5,5,0.12)');
       vignette.addColorStop(1, 'rgba(5,5,5,0.88)');

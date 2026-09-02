@@ -163,9 +163,9 @@ A paleta combina matéria escura, papel aquecido e sinais vermelhos precisos; o 
 
 ## Layout
 
-O sistema usa uma grade editorial de alta densidade com trilhos, faixas inferiores, listas indexadas e capítulos em campos contínuos. No hero desktop, o cabeçalho tem três colunas e a abertura divide a mensagem principal de um motor visual enquadrado: ondas de marfim e vermelho percorrem a área de mídia enquanto a faixa inferior ancora o identificador e as quatro etapas.
+O sistema usa uma grade editorial de alta densidade com trilhos, faixas inferiores, listas indexadas e capítulos em campos contínuos. No hero desktop, o cabeçalho tem três colunas e a abertura divide a mensagem principal de um motor visual enquadrado: uma massa orgânica de seda luminosa em marfim e vermelho atravessa a área de mídia enquanto uma rota fina nasce junto à ação e conduz até a faixa inferior com as quatro etapas.
 
-As seções principais usam respiro vertical fluido e margem lateral responsiva. Introduções combinam uma coluna dominante de título com uma coluna menor de explicação; listas usam quatro colunas quando a sequência é essencial. Entre catálogo e arquitetura, a sequência de marca ocupa uma passagem fixa e converte rolagem em profundidade, palavra e convergência. O capítulo “Tudo conectado” usa um núcleo radial com oito capacidades e uma explicação lateral, enquanto o contato organiza copy e formulário dentro de um único painel escuro dividido por regra. Em até 980px, navegação central sai de cena, hero e diagrama empilham e a faixa cinematográfica deixa de ser fixa. Em até 640px, os capítulos usam margem lateral de 20px, as sequências viram uma coluna e a ação principal ocupa toda a largura. Os elementos desaparecem apenas quando sua função já está coberta pela narrativa, nunca para esconder conteúdo essencial.
+As seções principais usam respiro vertical fluido e margem lateral responsiva. Introduções combinam uma coluna dominante de título com uma coluna menor de explicação; listas usam quatro colunas quando a sequência é essencial. Entre catálogo e arquitetura, a sequência de marca ocupa uma passagem fixa longa e converte rolagem em profundidade, palavra e convergência sem apressar a leitura. O capítulo “Tudo conectado” usa um núcleo radial com oito capacidades e uma explicação lateral, enquanto o contato organiza copy e formulário dentro de um único painel escuro dividido por regra. A faixa cinematográfica usa o vídeo como campo de fundo em tela cheia e posiciona a mensagem diretamente sobre a mídia com proteção de contraste. Em até 980px, navegação central sai de cena e hero e diagrama empilham. Em até 640px, os capítulos usam margem lateral de 20px, as sequências viram uma coluna e a ação principal ocupa toda a largura. Os elementos desaparecem apenas quando sua função já está coberta pela narrativa, nunca para esconder conteúdo essencial.
 
 **The Route Before Grid Rule.** Toda grade deve reforçar uma sequência, um índice ou uma relação operacional; não use colunas apenas para produzir variedade visual.
 
@@ -227,15 +227,15 @@ A rota é o componente-assinatura. Um traço vermelho fino organiza exatamente q
 
 ### Wave Engine
 
-O hero usa um canvas 2D isolado dentro de moldura técnica. Três famílias de linhas formam ondas de marfim e vermelho com composição aditiva, vinheta localizada e atualização limitada; o loop pausa fora da tela ou quando a aba fica oculta. A versão com movimento reduzido desenha um único quadro estático.
+O hero usa um canvas 2D isolado dentro de moldura técnica. Três fitas volumétricas combinam superfícies translúcidas e filamentos para formar uma massa orgânica de marfim, dourado quente e vermelho com composição aditiva; o loop pausa fora da tela ou quando a aba fica oculta. A versão com movimento reduzido desenha um único quadro estático.
 
 ### Brand Sequence
 
-A passagem principal de movimento é presa à rolagem. Oito módulos triangulares metálicos atravessam profundidade enquanto quatro palavras originais — Arquitetura, Integração, Automação e Evolução — ocupam o centro antes de convergir para a marca Frontier OS. Scripts ausentes ou movimento reduzido recebem uma composição estática equivalente com a mesma mensagem.
+A passagem principal de movimento é presa a uma rolagem deliberadamente longa. Oito módulos triangulares metálicos atravessam profundidade enquanto quatro palavras originais — Arquitetura, Integração, Automação e Evolução — permanecem legíveis no centro antes de convergir para a marca Frontier OS. Scripts ausentes ou movimento reduzido recebem uma composição estática equivalente com a mesma mensagem.
 
 ### Cinematic Strip
 
-A mídia ocupa uma faixa horizontal presa à borda da seção, com moldura parcial interna, metadado em caixa alta e controle quadrado. No desktop, a seção permanece fixa por uma única passagem e a rolagem controla frame, escala, recorte e deslocamento; o progresso é indicado por uma regra vertical vermelha. Em telas compactas, a faixa volta ao fluxo normal, mas o vídeo ainda responde à rolagem. Em redução de movimento, o quadro fica pausado em um estado representativo.
+A mídia ocupa todo o fundo da seção fixa, com moldura interna, metadado em caixa alta e controle quadrado. A mensagem fica sobreposta à esquerda e uma gradação escura garante contraste sem esconder a chama. A rolagem controla frame e uma aproximação suave da mídia; o progresso é indicado por uma regra vertical vermelha. Em telas compactas, a composição permanece em tela cheia e o texto ganha uma proteção tonal maior. Em redução de movimento, o quadro fica pausado em um estado representativo.
 
 ## Do's and Don'ts
 

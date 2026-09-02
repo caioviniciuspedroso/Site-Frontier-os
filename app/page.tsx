@@ -51,7 +51,7 @@ export default function Home() {
 
         <div className="hero-stage">
           <div className="hero-copy">
-            <h1 id="hero-title">Seu negócio.<span>Em modo sistema.</span></h1>
+            <h1 id="hero-title">Um sistema.<span>Toda a sua operação digital.</span></h1>
             <p>Estratégia, tecnologia e execução conectadas para sua empresa atrair, converter, operar e decidir melhor.</p>
             <a className="primary-cta" href="#contato">Começar um projeto<ArrowUpRight aria-hidden="true" /></a>
             <span className="hero-signature">Frontier OS // visão do sistema</span>
@@ -65,6 +65,15 @@ export default function Home() {
               <span>Fluxo contínuo</span><i><b /></i><small>FOS</small>
             </div>
           </figure>
+
+          <svg className="hero-flow-overlay" viewBox="0 0 1600 820" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M314 486H492C528 486 548 506 548 542V604C548 642 568 662 606 662H792C830 662 850 682 850 720V748H1550" />
+            <circle cx="314" cy="486" r="5" />
+            <circle cx="548" cy="604" r="5" />
+            <circle cx="850" cy="720" r="5" />
+            <circle cx="1120" cy="748" r="5" />
+            <circle cx="1390" cy="748" r="5" />
+          </svg>
         </div>
 
         <div className="hero-footer">

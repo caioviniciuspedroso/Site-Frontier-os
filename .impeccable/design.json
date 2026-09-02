@@ -252,8 +252,8 @@
       },
       {
         "name": "brand-scroll-sequence",
-        "value": "requestAnimationFrame + 340svh scroll progress",
-        "purpose": "Converte rolagem em profundidade dos módulos, passagem de palavras e convergência para a marca."
+        "value": "requestAnimationFrame + 560svh scroll progress",
+        "purpose": "Converte uma rolagem longa em profundidade dos módulos, leitura pausada das palavras e convergência para a marca."
       },
       {
         "name": "connected-reveal",
@@ -263,7 +263,7 @@
       {
         "name": "film-scroll-scrub",
         "value": "requestAnimationFrame + scroll progress",
-        "purpose": "Liga frame, escala, recorte e deslocamento da faixa cinematográfica ao progresso real da rolagem."
+        "purpose": "Liga frame e aproximação suave do vídeo em tela cheia ao progresso real da rolagem, preservando a copy sobreposta."
       },
       {
         "name": "activity-spin",
@@ -313,14 +313,14 @@
     {
       "name": "Motor de Ondas",
       "kind": "custom",
-      "description": "Canvas isolado que transforma fluxo operacional em ondas luminosas de marfim e vermelho dentro do hero.",
+      "description": "Canvas isolado que transforma fluxo operacional em fitas volumétricas e luminosas de marfim, dourado quente e vermelho dentro do hero.",
       "html": "<figure class=\"ds-wave-frame\"><figcaption>FRONTIER FLOW // MOTOR DO SISTEMA</figcaption><canvas aria-hidden=\"true\"></canvas><footer>FLUXO CONTÍNUO</footer></figure>",
       "css": ".ds-wave-frame { overflow:hidden; border:1px solid rgb(230 219 205 / 20%); background:#050505; color:var(--frontier-ivory, #e6dbcd); } .ds-wave-frame figcaption,.ds-wave-frame footer { display:flex; align-items:center; min-height:42px; padding:0 18px; border-block:1px solid rgb(230 219 205 / 15%); font:700 .57rem/1.2 var(--font-body, sans-serif); letter-spacing:.14em; text-transform:uppercase; } .ds-wave-frame canvas { display:block; width:100%; height:480px; }"
     },
     {
       "name": "Sequência de Marca",
       "kind": "custom",
-      "description": "Passagem presa à rolagem com módulos metálicos, quatro palavras e final convergente na marca Frontier OS.",
+      "description": "Passagem longa presa à rolagem com módulos metálicos, quatro palavras em leitura pausada e final convergente na marca Frontier OS.",
       "html": "<section class=\"ds-brand-sequence\"><svg aria-hidden=\"true\"><path d=\"M60 7 114 98H6Z\" /></svg><p>ARQUITETURA.</p><p>INTEGRAÇÃO.</p><p>AUTOMAÇÃO.</p><p>EVOLUÇÃO.</p><strong>FRONTIER OS</strong></section>",
       "css": ".ds-brand-sequence { position:relative; display:grid; place-items:center; min-height:100vh; overflow:hidden; border-block:1px solid rgb(230 219 205 / 13%); background:#030303; color:var(--frontier-ivory, #e6dbcd); } .ds-brand-sequence svg { position:absolute; width:220px; fill:none; stroke:#d2462e; stroke-width:10; } .ds-brand-sequence p { position:absolute; margin:0; font:500 clamp(3.4rem,7vw,6rem)/1 var(--font-body, sans-serif); letter-spacing:-.04em; } .ds-brand-sequence strong { font:600 clamp(2.6rem,5vw,4.5rem)/1 var(--font-display, sans-serif); text-transform:uppercase; }"
     },

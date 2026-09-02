@@ -43,8 +43,8 @@ export function BrandSequence() {
       const bounds = section.getBoundingClientRect();
       const distance = Math.max(1, section.offsetHeight - window.innerHeight);
       const progress = clamp(-bounds.top / distance);
-      const enter = smooth(progress / 0.12);
-      const exit = smooth((progress - 0.8) / 0.16);
+      const enter = smooth(progress / 0.08);
+      const exit = smooth((progress - 0.9) / 0.08);
 
       shardElements.forEach((element, index) => {
         const shard = shards[index];
@@ -58,22 +58,24 @@ export function BrandSequence() {
       });
 
       wordElements.forEach((element, index) => {
-        const center = 0.18 + index * 0.16;
-        const distanceFromCenter = Math.abs(progress - center);
-        const visibility = clamp(1 - distanceFromCenter / 0.085) * (1 - exit);
-        const translate = clamp((progress - center) / 0.085) * -34;
+        const start = 0.08 + index * 0.205;
+        const end = start + 0.165;
+        const visibility = smooth((progress - start) / 0.045)
+          * (1 - smooth((progress - (end - 0.045)) / 0.045))
+          * (1 - exit);
+        const translate = clamp((progress - start) / (end - start)) * -26;
         element.style.opacity = visibility.toFixed(3);
         element.style.filter = `blur(${((1 - visibility) * 8).toFixed(2)}px)`;
         element.style.transform = `translate3d(0, -50%, 0) translate3d(0, ${translate.toFixed(2)}px, 0)`;
       });
 
-      const finaleProgress = smooth((progress - 0.78) / 0.14);
+      const finaleProgress = smooth((progress - 0.88) / 0.08);
       finale.style.opacity = finaleProgress.toFixed(3);
       finale.style.filter = `blur(${((1 - finaleProgress) * 9).toFixed(2)}px)`;
       finale.style.transform = `translate3d(0, ${((1 - finaleProgress) * 28).toFixed(2)}px, 0) scale(${(0.9 + finaleProgress * 0.1).toFixed(3)})`;
 
       markers.forEach((marker, index) => {
-        marker.classList.toggle('is-active', progress >= 0.12 + index * 0.16);
+        marker.classList.toggle('is-active', progress >= 0.08 + index * 0.205);
       });
     };
 

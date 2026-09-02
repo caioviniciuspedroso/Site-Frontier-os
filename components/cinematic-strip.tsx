@@ -21,14 +21,11 @@ export function CinematicStrip() {
 
     const setProgress = (progress: number) => {
       section.style.setProperty('--film-progress', progress.toFixed(4));
-      section.style.setProperty('--film-copy-opacity', (1 - Math.min(0.36, Math.max(0, (progress - 0.72) * 2.4))).toFixed(4));
-      section.style.setProperty('--film-copy-y', `${(progress * -42).toFixed(2)}px`);
-      section.style.setProperty('--film-inset-v', `${((1 - progress) * 8).toFixed(3)}%`);
-      section.style.setProperty('--film-inset-l', `${((1 - progress) * 6).toFixed(3)}%`);
-      section.style.setProperty('--film-shift', `${((1 - progress) * 8).toFixed(3)}vw`);
-      section.style.setProperty('--film-scale', (0.84 + progress * 0.16).toFixed(4));
-      section.style.setProperty('--film-video-scale', (1.12 - progress * 0.07).toFixed(4));
-      section.style.setProperty('--film-video-shift', `${((progress - 0.5) * -3).toFixed(3)}%`);
+      section.style.setProperty('--film-copy-opacity', (1 - Math.min(0.16, Math.max(0, (progress - 0.86) * 1.2))).toFixed(4));
+      section.style.setProperty('--film-copy-y', `${(progress * -18).toFixed(2)}px`);
+      section.style.setProperty('--film-scale', (1.045 - progress * 0.045).toFixed(4));
+      section.style.setProperty('--film-video-scale', (1.13 - progress * 0.08).toFixed(4));
+      section.style.setProperty('--film-video-shift', `${((0.5 - progress) * 1.8).toFixed(3)}%`);
     };
 
     if (reducedMotion) {
@@ -78,9 +75,6 @@ export function CinematicStrip() {
         '--film-progress',
         '--film-copy-opacity',
         '--film-copy-y',
-        '--film-inset-v',
-        '--film-inset-l',
-        '--film-shift',
         '--film-scale',
         '--film-video-scale',
         '--film-video-shift',
