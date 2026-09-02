@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { ProjectBriefForm } from '@/components/project-brief-form';
-import { CinematicStrip } from '@/components/cinematic-strip';
+import { BrandMotion } from '@/components/brand-motion';
 import { ConnectedSystem } from '@/components/connected-system';
 import { HeroWave } from '@/components/hero-wave';
 import { BrandSequence } from '@/components/brand-sequence';
@@ -103,7 +103,7 @@ export default function Home() {
             <h2 id="film-title">Uma identidade. Um fluxo. Uma operação.</h2>
             <p>Role para percorrer a marca em movimento. A mesma lógica organiza sua estrutura digital: cada etapa avança conectada à próxima.</p>
           </div>
-          <CinematicStrip />
+          <BrandMotion />
           <div className="film-progress" aria-hidden="true"><span /></div>
         </div>
       </section>

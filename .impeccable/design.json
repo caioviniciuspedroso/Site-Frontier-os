@@ -261,9 +261,9 @@
         "purpose": "Desenha ligações e apresenta núcleo, módulos e explicação na ordem da dependência operacional."
       },
       {
-        "name": "film-scroll-scrub",
+        "name": "brand-scroll-motion",
         "value": "requestAnimationFrame + scroll progress",
-        "purpose": "Liga frame e aproximação suave do vídeo em tela cheia ao progresso real da rolagem, preservando a copy sobreposta."
+        "purpose": "Liga escala, inclinação, ecos e varredura da chama ao progresso real da rolagem, preservando a copy sobreposta."
       },
       {
         "name": "activity-spin",
@@ -362,12 +362,12 @@
       "css": ".ds-brief-result { padding:42px; border-radius:0; background:#181411; color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-body, sans-serif); } .ds-brief-result p { margin:0; font-size:1.2rem; line-height:1.75; } .ds-brief-result button { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:56px; margin-top:34px; padding:0 22px; border:1px solid rgb(230 219 205 / 42%); border-radius:0; background:transparent; color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-display, 'Arial Narrow', sans-serif); font-size:1rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:background 180ms ease, color 180ms ease; } .ds-brief-result button svg { width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.7; } .ds-brief-result button:hover { background:var(--frontier-ivory, #e6dbcd); color:#181411; } .ds-brief-result button:focus-visible { outline:2px solid var(--frontier-ivory, #e6dbcd); outline-offset:4px; } .ds-brief-result button:active { opacity:.72; }"
     },
     {
-      "name": "Controle da Faixa Cinematográfica",
+      "name": "Controle da Animação de Marca",
       "kind": "button",
       "refersTo": "button-outline",
-      "description": "Controle quadrado e compacto sobre a mídia para pausar ou ativar o movimento ligado à rolagem.",
-      "html": "<div class=\"ds-film-meta\"><span>FRONTIER VISION / MOTION STUDY</span><button type=\"button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m8 5 11 7-11 7z\"/></svg>REPRODUZIR</button></div>",
-      "css": ".ds-film-meta { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:88px; padding:16px 24px; border:1px solid rgb(230 219 205 / 20%); background:var(--frontier-red, #9c311f); color:var(--frontier-ivory, #e6dbcd); } .ds-film-meta > span { font-family:var(--font-body, sans-serif); font-size:.63rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; } .ds-film-meta button { display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:0 14px; border:1px solid rgb(230 219 205 / 52%); border-radius:0; background:rgb(5 5 5 / 72%); color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-body, sans-serif); font-size:.65rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:background 180ms ease; } .ds-film-meta button svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:1.8; } .ds-film-meta button:hover { background:#050505; } .ds-film-meta button:focus-visible { outline:2px solid var(--frontier-ivory, #e6dbcd); outline-offset:4px; } .ds-film-meta button:active { opacity:.72; }"
+      "description": "Controle quadrado e compacto sobre a cena para pausar ou ativar o movimento nativo da chama.",
+      "html": "<div class=\"ds-brand-meta\"><span>FRONTIER VISION / MARCA VIVA</span><button type=\"button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m8 5 11 7-11 7z\"/></svg>ATIVAR MOVIMENTO</button></div>",
+      "css": ".ds-brand-meta { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:88px; padding:16px 24px; border:1px solid rgb(230 219 205 / 20%); background:var(--frontier-red, #9c311f); color:var(--frontier-ivory, #e6dbcd); } .ds-brand-meta > span { font-family:var(--font-body, sans-serif); font-size:.63rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; } .ds-brand-meta button { display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:0 14px; border:1px solid rgb(230 219 205 / 52%); border-radius:0; background:rgb(5 5 5 / 72%); color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-body, sans-serif); font-size:.65rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:background 180ms ease; } .ds-brand-meta button svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:1.8; } .ds-brand-meta button:hover { background:#050505; } .ds-brand-meta button:focus-visible { outline:2px solid var(--frontier-ivory, #e6dbcd); outline-offset:4px; } .ds-brand-meta button:active { opacity:.72; }"
     }
   ],
   "narrative": {
