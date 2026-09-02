@@ -342,20 +342,6 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  transform: translate3d(-0.7%, 0.35%, 0) scale(1.035);
-  transform-origin: 68% 50%;
-  animation: hero-wave-drift 16s ease-in-out infinite alternate;
-  will-change: transform;
-}
-
-.hero-wave-background.is-wave-paused .hero-wave-canvas,
-.hero-wave-background.is-wave-hidden .hero-wave-canvas {
-  animation-play-state: paused;
-}
-
-@keyframes hero-wave-drift {
-  from { transform: translate3d(-0.7%, 0.35%, 0) scale(1.035); }
-  to { transform: translate3d(0.9%, -0.45%, 0) scale(1.055); }
 }
 
 .hero-footer {
@@ -1701,7 +1687,6 @@ a {
   }
 
   .hero-wave-background { opacity: 1; transform: none; }
-  .hero-wave-canvas { animation: none; transform: scale(1.035); }
   .film-copy { opacity: 1; transform: none; }
   .brand-motion { transform: none; }
   .brand-motion-mark,

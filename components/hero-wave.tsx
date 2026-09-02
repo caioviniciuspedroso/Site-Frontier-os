@@ -66,9 +66,10 @@ const ribbons: Ribbon[] = [
   },
 ];
 
-const CURVE_STEPS = 76;
-const DESKTOP_PIXEL_BUDGET = 1_400_000;
-const MOBILE_PIXEL_BUDGET = 700_000;
+const CURVE_STEPS = 64;
+const FRAME_INTERVAL = 80;
+const DESKTOP_PIXEL_BUDGET = 950_000;
+const MOBILE_PIXEL_BUDGET = 420_000;
 
 export function HeroWave() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -83,6 +84,11 @@ export function HeroWave() {
     let height = 1;
     let ratio = 1;
     let resizeFrame = 0;
+    let animationFrame = 0;
+    let lastPaint = 0;
+    let visible = true;
+    let pageVisible = !document.hidden;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const point = (ribbon: Ribbon, progress: number, time: number, offset = 0) => {
       const envelope = Math.sin(Math.PI * progress) ** 0.66;
@@ -190,12 +196,35 @@ export function HeroWave() {
       height = Math.max(1, Math.round(bounds.height));
       const pixelBudget = width < 768 ? MOBILE_PIXEL_BUDGET : DESKTOP_PIXEL_BUDGET;
       const budgetRatio = Math.sqrt(pixelBudget / (width * height));
-      ratio = Math.max(0.5, Math.min(window.devicePixelRatio || 1, 1, budgetRatio));
+      ratio = Math.max(0.5, Math.min(window.devicePixelRatio || 1, 0.85, budgetRatio));
       canvas.width = Math.round(width * ratio);
       canvas.height = Math.round(height * ratio);
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
-      paint(3600);
+      paint(reducedMotion ? 3600 : performance.now());
+    };
+
+    const animate = (time: number) => {
+      animationFrame = 0;
+      if (!visible || !pageVisible || reducedMotion) return;
+
+      if (time - lastPaint >= FRAME_INTERVAL) {
+        paint(time);
+        lastPaint = time;
+      }
+
+      animationFrame = window.requestAnimationFrame(animate);
+    };
+
+    const start = () => {
+      if (animationFrame || reducedMotion || !visible || !pageVisible) return;
+      animationFrame = window.requestAnimationFrame(animate);
+    };
+
+    const stop = () => {
+      if (!animationFrame) return;
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = 0;
     };
 
     const resize = () => {
@@ -203,16 +232,21 @@ export function HeroWave() {
       resizeFrame = window.requestAnimationFrame(() => {
         resizeFrame = 0;
         render();
+        start();
       });
     };
 
     const resizeObserver = new ResizeObserver(resize);
     const intersectionObserver = new IntersectionObserver(([entry]) => {
-      container.classList.toggle('is-wave-paused', !entry.isIntersecting);
+      visible = entry.isIntersecting;
+      if (visible) start();
+      else stop();
     }, { rootMargin: '100px' });
 
     const handleVisibility = () => {
-      container.classList.toggle('is-wave-hidden', document.hidden);
+      pageVisible = !document.hidden;
+      if (pageVisible) start();
+      else stop();
     };
 
     resizeObserver.observe(container);
@@ -220,13 +254,14 @@ export function HeroWave() {
     document.addEventListener('visibilitychange', handleVisibility);
     handleVisibility();
     render();
+    start();
 
     return () => {
       if (resizeFrame) window.cancelAnimationFrame(resizeFrame);
+      stop();
       resizeObserver.disconnect();
       intersectionObserver.disconnect();
       document.removeEventListener('visibilitychange', handleVisibility);
-      container.classList.remove('is-wave-paused', 'is-wave-hidden');
     };
   }, []);
 
