@@ -1,0 +1,14 @@
+Use case: ads-marketing
+Asset type: social-preview / Open Graph card, final canvas 1200×630 pixels, landscape 40:21 composition
+Primary request: Create one bold, restrained social card for Frontier OS. It must feel like a living industrial operations manual: precise technical structure, tactile printed-paper and powder-coated-metal cues, modular grid, diagrammatic joints and functional notation made only from abstract lines and blocks.
+Scene/backdrop: matte black field with subtle warm paper-grain and restrained industrial print texture.
+Subject: one continuous routed path in Frontier red moves through the composition like an operational circuit/manual route, connecting a few abstract ivory modules without becoming a chart, dashboard, website, or app mockup.
+Style/medium: premium editorial graphic design, Swiss-modernist hierarchy fused with an industrial field manual; flat graphic composition; sophisticated, minimal, highly legible.
+Composition/framing: exact 1200×630 landscape social-card layout with generous safe margins. Place the title as the dominant typographic anchor and the supporting line directly below it. Use a disciplined asymmetric grid. The single red routed path should create motion and continuity while staying secondary to the copy. No browser chrome, device frames, cards suggesting a UI, or website layout.
+Lighting/mood: matte, tactile, calm, operational, authoritative; no glow.
+Color palette: only matte black, Frontier red #9C311F, and warm ivory #E6DBCD. No blue, purple, or additional colors.
+Materials/textures: subtle uncoated paper fibers, screen-print ink, technical manual registration marks expressed only as non-text geometric details; clean edges and crisp type.
+Text (verbatim, exactly two text elements): "FRONTIER OS" and "Toda a sua operação digital. Em um só sistema."
+Typography: render both strings exactly and only once, with every accent and punctuation correct. Title in very large bold condensed uppercase sans serif, warm ivory, extremely legible. Supporting line in clean medium-weight sans serif, warm ivory, large enough for mobile social-preview readability. Do not hyphenate, abbreviate, translate, stylize letters into symbols, or add any other text.
+Constraints: exactly one routed red path; exact text only; high contrast; polished production-ready social preview; no invented stats, numbers, labels, clients, credentials, private data, people, icons, badges, emblems, logos beyond the title lettering, interface elements, watermarks, or extra text.
+Avoid: blue, purple, gradients, neon, cyberpunk, 3D chrome, glossy tech aesthetic, photography, people, decorative pseudo-text, tiny labels, QR codes, website mockups, app screenshots, dashboard UI.

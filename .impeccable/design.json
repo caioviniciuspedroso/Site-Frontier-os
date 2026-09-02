@@ -1,0 +1,404 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-02T07:08:44.8712833-03:00",
+  "title": "Design System: Frontier OS",
+  "extensions": {
+    "colorMeta": {
+      "frontier-red": {
+        "role": "primary",
+        "displayName": "Vermelho Frontier",
+        "canonical": "#9C311F",
+        "tonalRamp": [
+          "oklch(15% 0.10 32)",
+          "oklch(25% 0.13 32)",
+          "oklch(35% 0.15 32)",
+          "oklch(45% 0.16 32)",
+          "oklch(55% 0.16 32)",
+          "oklch(65% 0.13 32)",
+          "oklch(80% 0.08 32)",
+          "oklch(95% 0.025 32)"
+        ]
+      },
+      "signal-red": {
+        "role": "primary",
+        "displayName": "Vermelho de Sinal",
+        "canonical": "#D2462E",
+        "tonalRamp": [
+          "oklch(15% 0.11 31)",
+          "oklch(25% 0.15 31)",
+          "oklch(35% 0.18 31)",
+          "oklch(45% 0.19 31)",
+          "oklch(55% 0.18 31)",
+          "oklch(65% 0.15 31)",
+          "oklch(80% 0.09 31)",
+          "oklch(95% 0.03 31)"
+        ]
+      },
+      "action-red-hover": {
+        "role": "primary",
+        "displayName": "Vermelho de Ação em Hover",
+        "canonical": "#B93B26",
+        "tonalRamp": [
+          "oklch(15% 0.10 32)",
+          "oklch(25% 0.14 32)",
+          "oklch(35% 0.17 32)",
+          "oklch(45% 0.18 32)",
+          "oklch(55% 0.17 32)",
+          "oklch(65% 0.14 32)",
+          "oklch(80% 0.08 32)",
+          "oklch(95% 0.025 32)"
+        ]
+      },
+      "warm-ivory": {
+        "role": "secondary",
+        "displayName": "Marfim Quente",
+        "canonical": "#E6DBCD",
+        "tonalRamp": [
+          "oklch(15% 0.025 65)",
+          "oklch(25% 0.025 65)",
+          "oklch(35% 0.025 65)",
+          "oklch(45% 0.025 65)",
+          "oklch(55% 0.025 65)",
+          "oklch(65% 0.025 65)",
+          "oklch(80% 0.025 65)",
+          "oklch(95% 0.025 65)"
+        ]
+      },
+      "bright-ivory": {
+        "role": "secondary",
+        "displayName": "Marfim Luminoso",
+        "canonical": "#FFF8EF",
+        "tonalRamp": [
+          "oklch(15% 0.02 70)",
+          "oklch(25% 0.02 70)",
+          "oklch(35% 0.02 70)",
+          "oklch(45% 0.02 70)",
+          "oklch(55% 0.02 70)",
+          "oklch(65% 0.02 70)",
+          "oklch(80% 0.02 70)",
+          "oklch(95% 0.02 70)"
+        ]
+      },
+      "matte-black": {
+        "role": "neutral",
+        "displayName": "Preto Mate",
+        "canonical": "#050505",
+        "tonalRamp": [
+          "oklch(15% 0.002 70)",
+          "oklch(25% 0.002 70)",
+          "oklch(35% 0.002 70)",
+          "oklch(45% 0.002 70)",
+          "oklch(55% 0.002 70)",
+          "oklch(65% 0.002 70)",
+          "oklch(80% 0.002 70)",
+          "oklch(95% 0.002 70)"
+        ]
+      },
+      "surface-black": {
+        "role": "neutral",
+        "displayName": "Preto de Superfície",
+        "canonical": "#0B0B0B",
+        "tonalRamp": [
+          "oklch(15% 0.003 70)",
+          "oklch(25% 0.003 70)",
+          "oklch(35% 0.003 70)",
+          "oklch(45% 0.003 70)",
+          "oklch(55% 0.003 70)",
+          "oklch(65% 0.003 70)",
+          "oklch(80% 0.003 70)",
+          "oklch(95% 0.003 70)"
+        ]
+      },
+      "frontier-graphite": {
+        "role": "neutral",
+        "displayName": "Grafite Frontier",
+        "canonical": "#141313",
+        "tonalRamp": [
+          "oklch(15% 0.006 35)",
+          "oklch(25% 0.006 35)",
+          "oklch(35% 0.006 35)",
+          "oklch(45% 0.006 35)",
+          "oklch(55% 0.006 35)",
+          "oklch(65% 0.006 35)",
+          "oklch(80% 0.006 35)",
+          "oklch(95% 0.006 35)"
+        ]
+      },
+      "warm-ink": {
+        "role": "neutral",
+        "displayName": "Tinta Quente",
+        "canonical": "#181411",
+        "tonalRamp": [
+          "oklch(15% 0.014 55)",
+          "oklch(25% 0.014 55)",
+          "oklch(35% 0.014 55)",
+          "oklch(45% 0.014 55)",
+          "oklch(55% 0.014 55)",
+          "oklch(65% 0.014 55)",
+          "oklch(80% 0.014 55)",
+          "oklch(95% 0.014 55)"
+        ]
+      },
+      "muted-warm": {
+        "role": "neutral",
+        "displayName": "Neutro Quente Atenuado",
+        "canonical": "#B9AD9E",
+        "tonalRamp": [
+          "oklch(15% 0.025 65)",
+          "oklch(25% 0.025 65)",
+          "oklch(35% 0.025 65)",
+          "oklch(45% 0.025 65)",
+          "oklch(55% 0.025 65)",
+          "oklch(65% 0.025 65)",
+          "oklch(80% 0.025 65)",
+          "oklch(95% 0.025 65)"
+        ]
+      },
+      "muted-earth": {
+        "role": "neutral",
+        "displayName": "Terra Atenuada",
+        "canonical": "#655A51",
+        "tonalRamp": [
+          "oklch(15% 0.03 55)",
+          "oklch(25% 0.03 55)",
+          "oklch(35% 0.03 55)",
+          "oklch(45% 0.03 55)",
+          "oklch(55% 0.03 55)",
+          "oklch(65% 0.03 55)",
+          "oklch(80% 0.03 55)",
+          "oklch(95% 0.03 55)"
+        ]
+      },
+      "feedback-soft-red": {
+        "role": "neutral",
+        "displayName": "Vermelho Suave de Feedback",
+        "canonical": "#F3C4B9",
+        "tonalRamp": [
+          "oklch(15% 0.045 28)",
+          "oklch(25% 0.045 28)",
+          "oklch(35% 0.045 28)",
+          "oklch(45% 0.045 28)",
+          "oklch(55% 0.045 28)",
+          "oklch(65% 0.045 28)",
+          "oklch(80% 0.045 28)",
+          "oklch(95% 0.045 28)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Headline principal condensada, monumental e em caixa alta."
+      },
+      "headline": {
+        "displayName": "Headline de capítulo",
+        "purpose": "Abre seções e marca mudanças de campo cromático."
+      },
+      "title": {
+        "displayName": "Título operacional",
+        "purpose": "Nomeia serviços, etapas, destinos e módulos indexados."
+      },
+      "body": {
+        "displayName": "Corpo",
+        "purpose": "Explicação, formulário e texto persuasivo de alta legibilidade."
+      },
+      "label": {
+        "displayName": "Rótulo técnico",
+        "purpose": "Índices, metadados, códigos e ações compactas em caixa alta."
+      }
+    },
+    "shadows": [
+      {
+        "name": "route-glow",
+        "value": "drop-shadow(0 0 7px rgb(198 60 39 / 45%))",
+        "purpose": "Halo técnico restrito à rota conectiva do hero."
+      },
+      {
+        "name": "route-label-separation",
+        "value": "0 2px 18px #050505, 0 0 5px #050505",
+        "purpose": "Separa os quatro destinos da atmosfera visual sem criar elevação de cartão."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-fast",
+        "value": "180ms ease",
+        "purpose": "Cor, fundo, setas e respostas diretas de controles."
+      },
+      {
+        "name": "nav-route",
+        "value": "220ms ease",
+        "purpose": "Desenha a linha vermelha sob links de navegação."
+      },
+      {
+        "name": "route-flow",
+        "value": "11s linear infinite",
+        "purpose": "Faz o tracejado percorrer continuamente a rota operacional."
+      },
+      {
+        "name": "scroll-cue",
+        "value": "1.8s ease-in-out infinite",
+        "purpose": "Deslocamento vertical discreto do convite para explorar."
+      },
+      {
+        "name": "activity-spin",
+        "value": "700ms linear infinite",
+        "purpose": "Indica o estado transitório ao copiar o briefing."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms, 1 iteration",
+        "purpose": "Neutraliza transições e animações quando o usuário prefere movimento reduzido."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "980px"
+      },
+      {
+        "name": "mobile",
+        "value": "640px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Ação Primária",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Chamada preenchida para iniciar o projeto; é o principal uso de vermelho como ação.",
+      "html": "<a class=\"ds-primary-action\" href=\"#\">COMEÇAR UM PROJETO <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-primary-action { display:inline-flex; align-items:center; justify-content:center; gap:18px; min-height:58px; padding:0 24px; border:0; border-radius:0; background:var(--frontier-red, #9c311f); color:#fff8ef; font-family:var(--font-display, 'Arial Narrow', sans-serif); font-size:1rem; font-weight:600; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; transition:background 180ms ease; } .ds-primary-action svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; transition:transform 180ms ease; } .ds-primary-action:hover { background:#b93b26; } .ds-primary-action:hover svg { transform:translate(3px,-3px); } .ds-primary-action:focus-visible { outline:2px solid var(--frontier-ivory, #e6dbcd); outline-offset:4px; } .ds-primary-action:active { background:#9c311f; }"
+    },
+    {
+      "name": "Link de Navegação",
+      "kind": "nav",
+      "description": "Navegação compacta com uma linha vermelha que se desenha no hover.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação de exemplo\"><a href=\"#\">O SISTEMA</a><a href=\"#\">SOLUÇÕES</a><a href=\"#\">COMO FUNCIONA</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:36px; padding:0 24px; min-height:74px; border-bottom:1px solid rgb(230 219 205 / 16%); background:#050505; } .ds-nav a { position:relative; padding:14px 0; color:rgb(230 219 205 / 72%); font-family:var(--font-body, sans-serif); font-size:.78rem; font-weight:600; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; transition:color 180ms ease; } .ds-nav a::after { position:absolute; right:0; bottom:8px; left:0; height:1px; content:''; background:var(--frontier-red, #9c311f); transform:scaleX(0); transform-origin:right; transition:transform 220ms ease; } .ds-nav a:hover { color:var(--frontier-ivory, #e6dbcd); } .ds-nav a:hover::after { transform:scaleX(1); transform-origin:left; } .ds-nav a:focus-visible { outline:2px solid var(--frontier-ivory, #e6dbcd); outline-offset:4px; }"
+    },
+    {
+      "name": "Linha de Serviço Indexada",
+      "kind": "custom",
+      "description": "Linha editorial que organiza número, serviço, explicação e direção sem virar cartão.",
+      "html": "<div class=\"ds-service-row\"><span class=\"ds-service-number\">03</span><h3>CRM</h3><p>Pipeline, histórico e próximas ações em um fluxo visível.</p><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></div>",
+      "css": ".ds-service-row { display:grid; grid-template-columns:54px minmax(120px,.7fr) minmax(220px,1.3fr) 34px; align-items:center; gap:24px; min-height:116px; padding:0 18px; border-bottom:1px solid rgb(255 248 239 / 38%); background:var(--frontier-red, #9c311f); color:#fff8ef; transition:color 180ms ease, background 180ms ease; } .ds-service-number { font-family:var(--font-body, sans-serif); font-size:.7rem; font-variant-numeric:tabular-nums; font-weight:700; letter-spacing:.14em; } .ds-service-row h3 { margin:0; font-family:var(--font-display, 'Arial Narrow', sans-serif); font-size:2.4rem; font-weight:600; line-height:.94; letter-spacing:-.02em; text-transform:uppercase; } .ds-service-row p { max-width:58ch; margin:0; font-family:var(--font-body, sans-serif); font-size:.94rem; line-height:1.6; } .ds-service-row svg { width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:2; } .ds-service-row:hover { background:#fff8ef; color:#21140f; } .ds-service-row:focus-within { outline:2px solid #fff8ef; outline-offset:4px; }"
+    },
+    {
+      "name": "Etapa do Fluxo",
+      "kind": "card",
+      "description": "Célula sem elevação que conecta uma etapa operacional a seu resultado e às capacidades envolvidas.",
+      "html": "<article class=\"ds-flow-stage\"><div class=\"ds-flow-marker\"><span>02</span><svg viewBox=\"0 0 40 18\" aria-hidden=\"true\"><path d=\"M1 9h36m-6-6 6 6-6 6\"/></svg></div><h3>AQUISIÇÃO</h3><p>A atenção certa vira uma oportunidade rastreável.</p><small>TRÁFEGO ESTRATÉGICO · LANDING PAGES · ESTRUTURA DE CONVERSÃO</small></article>",
+      "css": ".ds-flow-stage { min-height:390px; padding:34px 30px 36px; border-right:1px solid rgb(24 20 17 / 26%); border-radius:0; background:var(--frontier-ivory, #e6dbcd); color:#181411; font-family:var(--font-body, sans-serif); } .ds-flow-marker { display:flex; align-items:center; justify-content:space-between; min-height:44px; color:var(--frontier-red, #9c311f); font-size:.7rem; font-variant-numeric:tabular-nums; font-weight:700; letter-spacing:.14em; } .ds-flow-marker svg { width:38px; height:18px; fill:none; stroke:currentColor; stroke-width:1.5; } .ds-flow-stage h3 { margin:96px 0 0; font-family:var(--font-display, 'Arial Narrow', sans-serif); font-size:3.25rem; font-weight:600; line-height:.9; text-transform:uppercase; } .ds-flow-stage p { max-width:28ch; min-height:78px; margin:24px 0 0; font-size:.98rem; line-height:1.55; } .ds-flow-stage small { display:block; margin-top:30px; color:#655a51; font-size:.72rem; line-height:1.6; } .ds-flow-stage:hover { background:#fff8ef; } .ds-flow-stage:focus-within { outline:2px solid var(--frontier-red, #9c311f); outline-offset:4px; }"
+    },
+    {
+      "name": "Trilho de Etapas",
+      "kind": "nav",
+      "description": "Faixa inferior que mantém as quatro frentes do sistema visíveis como uma sequência única.",
+      "html": "<div class=\"ds-stage-rail\" aria-label=\"Fluxo Frontier OS\"><span><small>01</small>PRESENÇA</span><span><small>02</small>AQUISIÇÃO</span><span><small>03</small>OPERAÇÃO</span><span><small>04</small>INTELIGÊNCIA</span></div>",
+      "css": ".ds-stage-rail { display:grid; grid-template-columns:repeat(4,1fr); border-inline:1px solid rgb(230 219 205 / 14%); border-block:1px solid rgb(230 219 205 / 16%); background:rgb(5 5 5 / 86%); color:var(--frontier-ivory, #e6dbcd); } .ds-stage-rail span { display:flex; align-items:center; gap:10px; min-height:76px; padding:0 24px; border-right:1px solid rgb(230 219 205 / 14%); font-family:var(--font-display, 'Arial Narrow', sans-serif); font-size:1rem; letter-spacing:.04em; text-transform:uppercase; } .ds-stage-rail span:last-child { border-right:0; } .ds-stage-rail small { color:#d2462e; font-family:var(--font-body, sans-serif); font-size:.62rem; font-variant-numeric:tabular-nums; font-weight:700; } .ds-stage-rail span:hover { background:rgb(230 219 205 / 6%); } .ds-stage-rail span:focus-visible { outline:2px solid var(--frontier-ivory, #e6dbcd); outline-offset:-4px; }"
+    },
+    {
+      "name": "Trilho Técnico de Soluções",
+      "kind": "custom",
+      "description": "Índice lateral escuro que mostra amplitude de oferta com traços vermelhos e divisórias finas.",
+      "html": "<aside class=\"ds-solution-rail\"><strong>SOLUÇÕES CONECTADAS</strong><ol><li>SITES PREMIUM</li><li>E-COMMERCE</li><li>CRM</li><li>AGENTES DE IA</li></ol></aside>",
+      "css": ".ds-solution-rail { width:286px; border-left:1px solid rgb(230 219 205 / 17%); background:rgb(5 5 5 / 92%); color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-body, sans-serif); } .ds-solution-rail strong { display:flex; align-items:center; min-height:54px; padding:0 22px; border-bottom:1px solid rgb(230 219 205 / 15%); color:rgb(230 219 205 / 58%); font-size:.58rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; } .ds-solution-rail ol { margin:0; padding:0; list-style:none; } .ds-solution-rail li { display:flex; align-items:center; gap:12px; min-height:58px; padding:4px 18px; border-bottom:1px solid rgb(230 219 205 / 10%); color:rgb(230 219 205 / 77%); font-size:.68rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; transition:color 180ms ease, background 180ms ease; } .ds-solution-rail li::before { flex:0 0 13px; width:13px; height:1px; content:''; background:#d2462e; } .ds-solution-rail li:hover { background:rgb(230 219 205 / 5%); color:#e6dbcd; }"
+    },
+    {
+      "name": "Campo Sublinhado",
+      "kind": "input",
+      "refersTo": "input-underline",
+      "description": "Campo transparente sobre marfim, com rótulo técnico e uma única linha estrutural.",
+      "html": "<label class=\"ds-field\"><span>EMPRESA</span><input type=\"text\" placeholder=\"Nome da sua empresa\" /></label>",
+      "css": ".ds-field { display:flex; flex-direction:column; gap:8px; padding:8px 0; background:var(--frontier-ivory, #e6dbcd); color:#181411; font-family:var(--font-body, sans-serif); } .ds-field span { font-size:.78rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; } .ds-field input { width:100%; min-height:54px; padding:10px 2px; border:0; border-bottom:1px solid rgb(24 20 17 / 46%); border-radius:0; background:transparent; color:#181411; font:400 1rem/1.7 var(--font-body, sans-serif); box-shadow:none; } .ds-field input::placeholder { color:#655a51; opacity:1; } .ds-field input:hover { border-bottom-color:#181411; } .ds-field input:focus-visible { outline:2px solid var(--frontier-red, #9c311f); outline-offset:4px; }"
+    },
+    {
+      "name": "Painel de Briefing",
+      "kind": "card",
+      "refersTo": "brief-result",
+      "description": "Resultado escuro do formulário com texto amplo e ação secundária de cópia.",
+      "html": "<section class=\"ds-brief-result\"><p>Olá, Frontier Vision. Quero entender como o Frontier OS pode conectar nossa operação digital.</p><button type=\"button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"9\" y=\"9\" width=\"10\" height=\"10\"/><path d=\"M5 15H4V5h10v1\"/></svg>COPIAR BRIEFING</button></section>",
+      "css": ".ds-brief-result { padding:42px; border-radius:0; background:#181411; color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-body, sans-serif); } .ds-brief-result p { margin:0; font-size:1.2rem; line-height:1.75; } .ds-brief-result button { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:56px; margin-top:34px; padding:0 22px; border:1px solid rgb(230 219 205 / 42%); border-radius:0; background:transparent; color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-display, 'Arial Narrow', sans-serif); font-size:1rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:background 180ms ease, color 180ms ease; } .ds-brief-result button svg { width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.7; } .ds-brief-result button:hover { background:var(--frontier-ivory, #e6dbcd); color:#181411; } .ds-brief-result button:focus-visible { outline:2px solid var(--frontier-ivory, #e6dbcd); outline-offset:4px; } .ds-brief-result button:active { opacity:.72; }"
+    },
+    {
+      "name": "Controle da Faixa Cinematográfica",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Controle quadrado e compacto sobre a mídia para pausar ou reproduzir a animação de marca.",
+      "html": "<div class=\"ds-film-meta\"><span>FRONTIER VISION / MOTION STUDY</span><button type=\"button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m8 5 11 7-11 7z\"/></svg>REPRODUZIR</button></div>",
+      "css": ".ds-film-meta { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:88px; padding:16px 24px; border:1px solid rgb(230 219 205 / 20%); background:var(--frontier-red, #9c311f); color:var(--frontier-ivory, #e6dbcd); } .ds-film-meta > span { font-family:var(--font-body, sans-serif); font-size:.63rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; } .ds-film-meta button { display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:0 14px; border:1px solid rgb(230 219 205 / 52%); border-radius:0; background:rgb(5 5 5 / 72%); color:var(--frontier-ivory, #e6dbcd); font-family:var(--font-body, sans-serif); font-size:.65rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:background 180ms ease; } .ds-film-meta button svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:1.8; } .ds-film-meta button:hover { background:#050505; } .ds-film-meta button:focus-visible { outline:2px solid var(--frontier-ivory, #e6dbcd); outline-offset:4px; } .ds-film-meta button:active { opacity:.72; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Living Operations Manual",
+    "overview": "Frontier OS transforma a linguagem de um manual operacional industrial em uma experiência digital viva. O sistema parece pertencer ao próprio universo da Frontier: preto mate, campos comprometidos de vermelho e marfim quente, rotas luminosas, índices numerados e linhas de registro fazem serviços dispersos parecerem uma infraestrutura única, visível e governável.\n\nA composição é cinematográfica sem abandonar utilidade. Grandes silhuetas tipográficas abrem cada capítulo; regras finas, trilhos e listas organizam o detalhe; a rota técnica conecta Presença, Aquisição, Operação e Inteligência. O acabamento aprovado para envio privilegia contraste, ritmo e mecanismo concreto, recusando cartões genéricos, cantos amigáveis em excesso, gradientes de texto e métricas fictícias.",
+    "keyCharacteristics": [
+      "Manual industrial vivo, editorial e orientado por rotas.",
+      "Campos de cor inteiros em preto mate, vermelho Frontier e marfim quente.",
+      "Hierarquia condensada e monumental com texto corrido calmo e legível.",
+      "Estrutura quadrada, guiada por bordas finas, índices e marcas de registro.",
+      "Profundidade luminosa concentrada na rota, na mídia e no núcleo da marca.",
+      "Movimento funcional que nunca esconde conteúdo e respeita redução de movimento."
+    ],
+    "rules": [
+      {
+        "name": "The Routed Red Rule",
+        "body": "Use o vermelho para mostrar ação, passagem ou estado; em áreas escuras, sua raridade é o que torna a rota legível.",
+        "section": "colors"
+      },
+      {
+        "name": "The Committed Field Rule",
+        "body": "Quando uma seção muda de cor, ela assume o campo por inteiro; não transforme vermelho e marfim em mosaicos de cartões pequenos.",
+        "section": "colors"
+      },
+      {
+        "name": "The Condensed Command Rule",
+        "body": "Barlow Condensed com peso 600–700 é a voz de comando; não a use em parágrafos extensos.",
+        "section": "typography"
+      },
+      {
+        "name": "The Uppercase Hierarchy Rule",
+        "body": "Caixa alta pertence a headlines, rótulos e ações; o corpo em Manrope preserva leitura natural.",
+        "section": "typography"
+      },
+      {
+        "name": "The Route Before Grid Rule",
+        "body": "Toda grade deve reforçar uma sequência, um índice ou uma relação operacional; não use colunas apenas para produzir variedade visual.",
+        "section": "layout"
+      },
+      {
+        "name": "The No Floating Cards Rule",
+        "body": "Superfícies permanecem presas à grade por bordas e contraste tonal; nunca simule profundidade com cartões soltos e sombras difusas.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Luminous Mechanism Rule",
+        "body": "Brilho é evidência de fluxo e deve permanecer confinado à rota, ao núcleo ou à mídia ativa.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Instrument Rule",
+        "body": "A forma padrão é reta e registrável; qualquer curva precisa descrever movimento, não decoração.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do use a rota Presença → Aquisição → Operação → Inteligência como estrutura recorrente para explicar conexão entre capacidades.",
+      "Do alterne campos completos de preto mate, vermelho e marfim para marcar capítulos com decisão.",
+      "Do preserve a combinação Barlow Condensed para comando e Manrope para explicação.",
+      "Do use índices, numerais tabulares, bordas finas e marcas de registro para organizar informação real.",
+      "Do mantenha foco visível, alvos de toque confortáveis e equivalência de conteúdo com movimento reduzido.",
+      "Do trate a chama Frontier e a mídia fornecida como ativos de marca preservados, nunca como formas a redesenhar livremente."
+    ],
+    "donts": [
+      "Don't transforme o portfólio em uma grade genérica de cartões arredondados.",
+      "Don't espalhe brilho, gradientes ou vermelho por elementos sem função de ação ou rota.",
+      "Don't invente leituras de instrumento, métricas, clientes, resultados ou dados para preencher a estética operacional.",
+      "Don't use sombras macias para destacar containers; borda, posição e campo de cor devem fazer esse trabalho.",
+      "Don't esconda conteúdo essencial atrás de vídeo, animação, hover ou interação exclusiva de desktop.",
+      "Don't dilua a hierarquia com muitas escalas concorrentes, textos condensados longos ou rótulos sem função."
+    ]
+  }
+}

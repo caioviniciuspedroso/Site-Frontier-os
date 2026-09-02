@@ -1,0 +1,12 @@
+{
+  "asset": "frontier-hero-atmosphere.png",
+  "generation_method": "OpenAI built-in ImageGen, single production generation",
+  "generated_at": "2026-09-01",
+  "sha256": "e490ba647362befe9f7c219ec6df2343f3e389c0501a827cd9b5d73a7c3cc6f2",
+  "prompt_file": "frontier-hero-atmosphere.prompt.txt",
+  "references": [
+    "approved Frontier OS comp-c.png",
+    "user-supplied Logo Frontier (1).png"
+  ],
+  "notes": "Generated as a text-free cinematic atmosphere and node plate. Semantic text, labels, routes, controls, and service inventory are rendered separately by the site."
+}
