@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 
 const nodes = [
   ['Site', 'Recebe a demanda', 'node-site'],
@@ -12,8 +15,31 @@ const nodes = [
 ];
 
 export function ConnectedSystem() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    section.classList.add('motion-ready');
+    let revealFrame = 0;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      revealFrame = window.requestAnimationFrame(() => section.classList.add('is-visible'));
+      observer.disconnect();
+    }, { threshold: 0.18 });
+
+    observer.observe(section);
+
+    return () => {
+      if (revealFrame) window.cancelAnimationFrame(revealFrame);
+      observer.disconnect();
+      section.classList.remove('motion-ready', 'is-visible');
+    };
+  }, []);
+
   return (
-    <section className="connected-section" aria-labelledby="connected-title">
+    <section className="connected-section" ref={sectionRef} aria-labelledby="connected-title">
       <h2 id="connected-title">Tudo conectado.</h2>
       <div className="connected-layout">
         <figure className="system-orbit">
@@ -32,8 +58,8 @@ export function ConnectedSystem() {
             <Image src="/brand/frontier-logo.png" alt="" width={92} height={92} />
           </div>
           <ul>
-            {nodes.map(([title, detail, className]) => (
-              <li className={className} key={title}>
+            {nodes.map(([title, detail, className], index) => (
+              <li className={className} key={title} style={{ transitionDelay: `${420 + index * 72}ms` }}>
                 <strong>{title}</strong><small>{detail}</small>
               </li>
             ))}

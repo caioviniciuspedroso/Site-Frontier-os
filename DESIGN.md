@@ -163,20 +163,20 @@ A paleta combina matéria escura, papel aquecido e sinais vermelhos precisos; o 
 
 ## Layout
 
-O sistema usa uma grade editorial de alta densidade com trilhos laterais, faixas inferiores, listas indexadas e capítulos em campos contínuos. No hero desktop, o cabeçalho tem três colunas, o texto ocupa o quadrante inferior esquerdo, a rota resolve quatro destinos à direita e um trilho de serviços fecha a borda; a faixa inferior ancora o identificador do sistema e as quatro etapas.
+O sistema usa uma grade editorial de alta densidade com trilhos, faixas inferiores, listas indexadas e capítulos em campos contínuos. No hero desktop, o cabeçalho tem três colunas e a abertura divide a mensagem principal de um motor visual enquadrado: ondas de marfim e vermelho percorrem a área de mídia enquanto a faixa inferior ancora o identificador e as quatro etapas.
 
-As seções principais usam respiro vertical fluido e margem lateral responsiva. Introduções combinam uma coluna dominante de título com uma coluna menor de explicação; listas usam quatro colunas quando a sequência é essencial. O capítulo “Tudo conectado” usa um núcleo radial com oito capacidades e uma explicação lateral, enquanto o contato organiza copy e formulário dentro de um único painel escuro dividido por regra. Em até 980px, navegação central e trilho de serviços saem de cena, o diagrama empilha com sua explicação e a faixa cinematográfica deixa de ser fixa. Em até 640px, os capítulos usam margem lateral de 20px, as sequências viram uma coluna e a ação principal ocupa toda a largura. Os elementos desaparecem apenas quando sua função já está coberta pela narrativa, nunca para esconder conteúdo essencial.
+As seções principais usam respiro vertical fluido e margem lateral responsiva. Introduções combinam uma coluna dominante de título com uma coluna menor de explicação; listas usam quatro colunas quando a sequência é essencial. Entre catálogo e arquitetura, a sequência de marca ocupa uma passagem fixa e converte rolagem em profundidade, palavra e convergência. O capítulo “Tudo conectado” usa um núcleo radial com oito capacidades e uma explicação lateral, enquanto o contato organiza copy e formulário dentro de um único painel escuro dividido por regra. Em até 980px, navegação central sai de cena, hero e diagrama empilham e a faixa cinematográfica deixa de ser fixa. Em até 640px, os capítulos usam margem lateral de 20px, as sequências viram uma coluna e a ação principal ocupa toda a largura. Os elementos desaparecem apenas quando sua função já está coberta pela narrativa, nunca para esconder conteúdo essencial.
 
 **The Route Before Grid Rule.** Toda grade deve reforçar uma sequência, um índice ou uma relação operacional; não use colunas apenas para produzir variedade visual.
 
 ## Elevation & Depth
 
-O sistema é plano por padrão e não usa sombras de cartão. Profundidade vem da atmosfera de mídia, de superfícies translúcidas escuras com blur controlado, da sobreposição de linhas e de um brilho vermelho localizado na rota. Sombras de texto aparecem somente onde são necessárias para separar rótulos técnicos da imagem; bordas e campos de cor continuam sendo a estrutura principal.
+O sistema é plano por padrão e não usa sombras de cartão. Profundidade vem do motor de ondas, da perspectiva dos módulos metálicos, da sobreposição de linhas e de um brilho vermelho localizado na rota. Bordas e campos de cor continuam sendo a estrutura principal; blur aparece apenas durante entrada, saída ou passagem em profundidade.
 
 ### Shadow Vocabulary
 
 - **Brilho de Rota:** halo vermelho curto aplicado à linha conectiva para sugerir energia sem engrossar o traço.
-- **Separação de Rótulo:** sombra preta concentrada sob os destinos do hero para preservar leitura sobre a atmosfera.
+- **Separação de Plano:** vinheta escura concentra as ondas dentro da moldura do hero sem criar uma superfície flutuante.
 
 ### Named Rules
 
@@ -223,7 +223,15 @@ Listas de serviços e processos funcionam como tabelas editoriais: número tabul
 
 ### Operational Route
 
-A rota é o componente-assinatura. Um traço vermelho fino e tracejado parte do núcleo Frontier e resolve exatamente quatro destinos — Presença, Aquisição, Operação e Inteligência — com halo técnico discreto. No hero, imagem, rota e rótulos entram uma única vez e permanecem estáveis; o diagrama radial posterior explica a conexão entre oito capacidades com texto equivalente fora do SVG. Em `prefers-reduced-motion`, tudo surge já no estado final.
+A rota é o componente-assinatura. Um traço vermelho fino organiza exatamente quatro destinos — Presença, Aquisição, Operação e Inteligência — no trilho inferior. O diagrama radial posterior explica a conexão entre oito capacidades: anel, ligações, núcleo, módulos e texto entram em ordem para tornar a dependência legível. Em `prefers-reduced-motion`, tudo surge já no estado final.
+
+### Wave Engine
+
+O hero usa um canvas 2D isolado dentro de moldura técnica. Três famílias de linhas formam ondas de marfim e vermelho com composição aditiva, vinheta localizada e atualização limitada; o loop pausa fora da tela ou quando a aba fica oculta. A versão com movimento reduzido desenha um único quadro estático.
+
+### Brand Sequence
+
+A passagem principal de movimento é presa à rolagem. Oito módulos triangulares metálicos atravessam profundidade enquanto quatro palavras originais — Arquitetura, Integração, Automação e Evolução — ocupam o centro antes de convergir para a marca Frontier OS. Scripts ausentes ou movimento reduzido recebem uma composição estática equivalente com a mesma mensagem.
 
 ### Cinematic Strip
 

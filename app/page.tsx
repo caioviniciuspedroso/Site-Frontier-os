@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import type { CSSProperties } from 'react';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { ProjectBriefForm } from '@/components/project-brief-form';
 import { CinematicStrip } from '@/components/cinematic-strip';
 import { ConnectedSystem } from '@/components/connected-system';
+import { HeroWave } from '@/components/hero-wave';
+import { BrandSequence } from '@/components/brand-sequence';
 
 const stages = ['Presença', 'Aquisição', 'Operação', 'Inteligência'];
 
@@ -19,20 +20,6 @@ const services = [
   ['Tráfego estratégico', 'Aquisição orientada por oferta, página e leitura de dados.'],
   ['Estrutura digital', 'Canais, ferramentas e processos organizados em uma base única.'],
   ['Dashboards', 'Indicadores que devolvem clareza para a próxima decisão.'],
-];
-
-const heroServices = [
-  'Sites premium',
-  'E-commerce',
-  'CRM',
-  'Agentes de IA',
-  'Automações',
-  'Sistemas',
-  'SEO',
-  'Google Meu Negócio',
-  'Tráfego estratégico',
-  'Estrutura digital',
-  'Dashboards',
 ];
 
 const process = [
@@ -62,43 +49,23 @@ export default function Home() {
           </a>
         </header>
 
-        <div className="hero-atmosphere" aria-hidden="true">
-          <Image
-            src="/brand/frontier-hero-atmosphere.png"
-            alt=""
-            fill
-            sizes="100vw"
-            priority
-          />
+        <div className="hero-stage">
+          <div className="hero-copy">
+            <h1 id="hero-title">Seu negócio.<span>Em modo sistema.</span></h1>
+            <p>Estratégia, tecnologia e execução conectadas para sua empresa atrair, converter, operar e decidir melhor.</p>
+            <a className="primary-cta" href="#contato">Começar um projeto<ArrowUpRight aria-hidden="true" /></a>
+            <span className="hero-signature">Frontier OS // visão do sistema</span>
+          </div>
+
+          <figure className="hero-visual">
+            <figcaption className="orbit-caption">Fluxos de presença, aquisição, operação e inteligência conectados pela Frontier OS.</figcaption>
+            <div className="hero-visual-head"><span>Frontier flow // motor do sistema</span><small>01</small></div>
+            <div className="hero-wave-field"><HeroWave /></div>
+            <div className="hero-visual-foot" aria-hidden="true">
+              <span>Fluxo contínuo</span><i><b /></i><small>FOS</small>
+            </div>
+          </figure>
         </div>
-
-        <svg className="hero-route-overlay" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <path d="M600 454 H778 Q846 454 846 384 V168 Q846 142 874 142 H1088" />
-          <path d="M600 468 H818 Q878 468 878 422 V380 Q878 360 902 360 H1088" />
-          <path d="M600 482 H932 Q978 482 978 526 V610 H1088" />
-          <path d="M600 496 H834 Q868 496 868 548 V812 Q868 836 896 836 H1088" />
-        </svg>
-
-        <div className="hero-route-labels" aria-label="O núcleo Frontier conecta quatro frentes da operação digital">
-          {stages.map((stage, index) => (
-            <span key={stage} style={{ '--route-index': index } as CSSProperties}>
-              <small>{String(index + 1).padStart(2, '0')}</small>{stage}
-            </span>
-          ))}
-        </div>
-
-        <div className="hero-copy">
-          <h1 id="hero-title">Um sistema.<span>Toda a sua operação digital.</span></h1>
-          <p>Estratégia, tecnologia e execução conectadas para sua empresa atrair, converter, operar e decidir melhor.</p>
-          <a className="primary-cta" href="#contato">Começar um projeto<ArrowUpRight aria-hidden="true" /></a>
-        </div>
-
-        <aside className="hero-service-rail" aria-label="Soluções Frontier OS">
-          <span className="rail-title">Soluções conectadas</span>
-          <ol>
-            {heroServices.map((service) => <li key={service}>{service}</li>)}
-          </ol>
-        </aside>
 
         <div className="hero-footer">
           <span className="system-id">FOS / SYS—001</span>
@@ -123,6 +90,8 @@ export default function Home() {
           ))}
         </ol>
       </section>
+
+      <BrandSequence />
 
       <ConnectedSystem />
 

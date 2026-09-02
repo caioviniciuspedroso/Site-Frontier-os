@@ -226,12 +226,12 @@
       {
         "name": "route-glow",
         "value": "drop-shadow(0 0 7px rgb(198 60 39 / 45%))",
-        "purpose": "Halo técnico restrito à rota conectiva do hero."
+        "purpose": "Halo técnico restrito a rotas e módulos metálicos ativos."
       },
       {
-        "name": "route-label-separation",
-        "value": "0 2px 18px #050505, 0 0 5px #050505",
-        "purpose": "Separa os quatro destinos da atmosfera visual sem criar elevação de cartão."
+        "name": "wave-vignette",
+        "value": "radial-gradient(ellipse at center, transparent 34%, #050505 100%)",
+        "purpose": "Concentra as ondas dentro da moldura do hero sem criar elevação de cartão."
       }
     ],
     "motion": [
@@ -247,8 +247,18 @@
       },
       {
         "name": "hero-reveal",
-        "value": "1.25s cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Revela imagem, rota e rótulos uma vez e preserva o hero estável depois da entrada."
+        "value": "900ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Abre a moldura do motor de ondas e preserva o conteúdo estável depois da entrada."
+      },
+      {
+        "name": "brand-scroll-sequence",
+        "value": "requestAnimationFrame + 340svh scroll progress",
+        "purpose": "Converte rolagem em profundidade dos módulos, passagem de palavras e convergência para a marca."
+      },
+      {
+        "name": "connected-reveal",
+        "value": "560–1600ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Desenha ligações e apresenta núcleo, módulos e explicação na ordem da dependência operacional."
       },
       {
         "name": "film-scroll-scrub",
@@ -301,10 +311,24 @@
       "css": ".ds-service-row { display:grid; grid-template-columns:54px minmax(120px,.7fr) minmax(220px,1.3fr) 34px; align-items:center; gap:24px; min-height:116px; padding:0 18px; border-bottom:1px solid rgb(255 248 239 / 38%); background:var(--frontier-red, #9c311f); color:#fff8ef; transition:color 180ms ease, background 180ms ease; } .ds-service-number { font-family:var(--font-body, sans-serif); font-size:.7rem; font-variant-numeric:tabular-nums; font-weight:700; letter-spacing:.14em; } .ds-service-row h3 { margin:0; font-family:var(--font-display, 'Arial Narrow', sans-serif); font-size:2.4rem; font-weight:600; line-height:.94; letter-spacing:-.02em; text-transform:uppercase; } .ds-service-row p { max-width:58ch; margin:0; font-family:var(--font-body, sans-serif); font-size:.94rem; line-height:1.6; } .ds-service-row svg { width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:2; } .ds-service-row:hover { background:#fff8ef; color:#21140f; } .ds-service-row:focus-within { outline:2px solid #fff8ef; outline-offset:4px; }"
     },
     {
+      "name": "Motor de Ondas",
+      "kind": "custom",
+      "description": "Canvas isolado que transforma fluxo operacional em ondas luminosas de marfim e vermelho dentro do hero.",
+      "html": "<figure class=\"ds-wave-frame\"><figcaption>FRONTIER FLOW // MOTOR DO SISTEMA</figcaption><canvas aria-hidden=\"true\"></canvas><footer>FLUXO CONTÍNUO</footer></figure>",
+      "css": ".ds-wave-frame { overflow:hidden; border:1px solid rgb(230 219 205 / 20%); background:#050505; color:var(--frontier-ivory, #e6dbcd); } .ds-wave-frame figcaption,.ds-wave-frame footer { display:flex; align-items:center; min-height:42px; padding:0 18px; border-block:1px solid rgb(230 219 205 / 15%); font:700 .57rem/1.2 var(--font-body, sans-serif); letter-spacing:.14em; text-transform:uppercase; } .ds-wave-frame canvas { display:block; width:100%; height:480px; }"
+    },
+    {
+      "name": "Sequência de Marca",
+      "kind": "custom",
+      "description": "Passagem presa à rolagem com módulos metálicos, quatro palavras e final convergente na marca Frontier OS.",
+      "html": "<section class=\"ds-brand-sequence\"><svg aria-hidden=\"true\"><path d=\"M60 7 114 98H6Z\" /></svg><p>ARQUITETURA.</p><p>INTEGRAÇÃO.</p><p>AUTOMAÇÃO.</p><p>EVOLUÇÃO.</p><strong>FRONTIER OS</strong></section>",
+      "css": ".ds-brand-sequence { position:relative; display:grid; place-items:center; min-height:100vh; overflow:hidden; border-block:1px solid rgb(230 219 205 / 13%); background:#030303; color:var(--frontier-ivory, #e6dbcd); } .ds-brand-sequence svg { position:absolute; width:220px; fill:none; stroke:#d2462e; stroke-width:10; } .ds-brand-sequence p { position:absolute; margin:0; font:500 clamp(3.4rem,7vw,6rem)/1 var(--font-body, sans-serif); letter-spacing:-.04em; } .ds-brand-sequence strong { font:600 clamp(2.6rem,5vw,4.5rem)/1 var(--font-display, sans-serif); text-transform:uppercase; }"
+    },
+    {
       "name": "Sistema Conectado",
       "kind": "custom",
-      "description": "Diagrama radial acessível que torna visível como oito capacidades compartilham o mesmo núcleo operacional.",
-      "html": "<section class=\"ds-connected\"><h2>Tudo conectado.</h2><div class=\"ds-orbit\" role=\"img\" aria-label=\"Site, SEO, formulário, agente de IA, CRM, automação, dashboard e sistema conectados à Frontier OS\"><span>SITE</span><span>SEO</span><strong>FRONTIER OS</strong><span>CRM</span><span>DASHBOARD</span></div></section>",
+      "description": "Diagrama radial acessível que revela como oito capacidades compartilham o mesmo núcleo operacional.",
+      "html": "<section class=\"ds-connected\"><h2>Tudo conectado.</h2><figure class=\"ds-orbit\"><figcaption>Site, SEO, formulário, agente de IA, CRM, automação, dashboard e sistema conectados à Frontier OS</figcaption><span>SITE</span><span>SEO</span><strong>FRONTIER OS</strong><span>CRM</span><span>DASHBOARD</span></figure></section>",
       "css": ".ds-connected { padding:72px; border-block:1px solid rgb(230 219 205 / 13%); background:#050505; color:var(--frontier-ivory, #e6dbcd); } .ds-connected h2 { margin:0; font:500 clamp(3rem,5.2vw,5.6rem)/1 var(--font-body, sans-serif); letter-spacing:-.04em; text-align:center; } .ds-orbit { position:relative; display:grid; grid-template-columns:repeat(5,1fr); align-items:center; gap:16px; max-width:720px; min-height:360px; margin:64px auto 0; border:1px dashed rgb(156 49 31 / 30%); border-radius:50%; } .ds-orbit span,.ds-orbit strong { display:grid; place-items:center; min-height:58px; border:1px solid rgb(230 219 205 / 20%); background:#0a0a0a; font:700 .72rem/1.2 var(--font-body, sans-serif); text-align:center; } .ds-orbit strong { min-height:92px; color:#d2462e; }"
     },
     {
