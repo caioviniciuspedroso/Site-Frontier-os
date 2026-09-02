@@ -15,21 +15,36 @@ const body = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://frontier-os.contato-frontiervisi.chatgpt.site'),
   title: 'Frontier OS — Toda a sua operação digital em um só sistema',
   description:
     'Sites premium, CRM, IA, automações, sistemas, mídia e dados conectados para sua empresa operar e crescer melhor.',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Frontier OS — Toda a sua operação digital em um só sistema',
     description:
       'Sites premium, CRM, IA, automações, sistemas, mídia e dados conectados para sua empresa operar e crescer melhor.',
     type: 'website',
     locale: 'pt_BR',
+    url: '/',
+    siteName: 'Frontier OS',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Frontier OS — Toda a sua operação digital em um só sistema',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Frontier OS — Toda a sua operação digital em um só sistema',
     description:
       'Sites premium, CRM, IA, automações, sistemas, mídia e dados conectados para sua empresa operar e crescer melhor.',
+    images: ['/og.png'],
   },
 };
 
