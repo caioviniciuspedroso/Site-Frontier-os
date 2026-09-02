@@ -163,7 +163,7 @@ A paleta combina matéria escura, papel aquecido e sinais vermelhos precisos; o 
 
 ## Layout
 
-O sistema usa uma grade editorial de alta densidade com trilhos, faixas inferiores, listas indexadas e capítulos em campos contínuos. No hero desktop, o cabeçalho tem três colunas e a abertura divide a mensagem principal de um motor visual enquadrado: uma massa orgânica de seda luminosa em marfim e vermelho atravessa a área de mídia enquanto uma rota fina nasce junto à ação e conduz até a faixa inferior com as quatro etapas.
+O sistema usa uma grade editorial de alta densidade com trilhos, faixas inferiores, listas indexadas e capítulos em campos contínuos. No hero desktop, o cabeçalho tem três colunas e a abertura acontece sobre um único campo visual: uma massa orgânica de seda luminosa em marfim e vermelho atravessa todo o fundo, passa atrás da mensagem e encontra uma rota fina que nasce junto à ação e conduz até a faixa inferior com as quatro etapas.
 
 As seções principais usam respiro vertical fluido e margem lateral responsiva. Introduções combinam uma coluna dominante de título com uma coluna menor de explicação; listas usam quatro colunas quando a sequência é essencial. Entre catálogo e arquitetura, a sequência de marca ocupa uma passagem fixa longa e converte rolagem em profundidade, palavra e convergência sem apressar a leitura. O capítulo “Tudo conectado” usa um núcleo radial com oito capacidades e uma explicação lateral, enquanto o contato organiza copy e formulário dentro de um único painel escuro dividido por regra. A faixa cinematográfica usa o vídeo como campo de fundo em tela cheia e posiciona a mensagem diretamente sobre a mídia com proteção de contraste. Em até 980px, navegação central sai de cena e hero e diagrama empilham. Em até 640px, os capítulos usam margem lateral de 20px, as sequências viram uma coluna e a ação principal ocupa toda a largura. Os elementos desaparecem apenas quando sua função já está coberta pela narrativa, nunca para esconder conteúdo essencial.
 
@@ -176,7 +176,7 @@ O sistema é plano por padrão e não usa sombras de cartão. Profundidade vem d
 ### Shadow Vocabulary
 
 - **Brilho de Rota:** halo vermelho curto aplicado à linha conectiva para sugerir energia sem engrossar o traço.
-- **Separação de Plano:** vinheta escura concentra as ondas dentro da moldura do hero sem criar uma superfície flutuante.
+- **Separação de Plano:** vinheta escura protege a leitura enquanto as ondas atravessam o campo contínuo do hero sem criar uma superfície flutuante.
 
 ### Named Rules
 
@@ -227,7 +227,7 @@ A rota é o componente-assinatura. Um traço vermelho fino organiza exatamente q
 
 ### Wave Engine
 
-O hero usa um canvas 2D isolado dentro de moldura técnica. Três fitas volumétricas combinam superfícies translúcidas e filamentos para formar uma massa orgânica de marfim, dourado quente e vermelho com composição aditiva; o loop pausa fora da tela ou quando a aba fica oculta. A versão com movimento reduzido desenha um único quadro estático.
+O hero usa um canvas 2D em tela cheia atrás da copy, sem moldura ou cartão. Três fitas volumétricas combinam superfícies translúcidas e filamentos para formar uma massa orgânica de marfim, dourado quente e vermelho com composição aditiva; o loop pausa fora da tela ou quando a aba fica oculta. A versão com movimento reduzido desenha um único quadro estático.
 
 ### Brand Sequence
 
@@ -235,7 +235,7 @@ A passagem principal de movimento é presa a uma rolagem deliberadamente longa. 
 
 ### Cinematic Strip
 
-A mídia ocupa todo o fundo da seção fixa, com moldura interna, metadado em caixa alta e controle quadrado. A mensagem fica sobreposta à esquerda e uma gradação escura garante contraste sem esconder a chama. A rolagem controla frame e uma aproximação suave da mídia; o progresso é indicado por uma regra vertical vermelha. Em telas compactas, a composição permanece em tela cheia e o texto ganha uma proteção tonal maior. Em redução de movimento, o quadro fica pausado em um estado representativo.
+A mídia ocupa todo o fundo da seção fixa, com moldura interna, metadado em caixa alta e controle quadrado. O vídeo de 1280 × 720 é renderizado pela altura e ancorado à direita para evitar a ampliação excessiva em telas ultrawide; o campo restante continua em preto e vermelho. A mensagem fica sobreposta à esquerda e uma gradação escura garante contraste sem esconder a chama. A rolagem controla frame e uma aproximação mínima da mídia; o progresso é indicado por uma regra vertical vermelha. Em telas compactas, a composição permanece em tela cheia e o texto ganha uma proteção tonal maior. Em redução de movimento, o quadro fica pausado em um estado representativo.
 
 ## Do's and Don'ts
 

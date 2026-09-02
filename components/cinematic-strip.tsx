@@ -23,8 +23,8 @@ export function CinematicStrip() {
       section.style.setProperty('--film-progress', progress.toFixed(4));
       section.style.setProperty('--film-copy-opacity', (1 - Math.min(0.16, Math.max(0, (progress - 0.86) * 1.2))).toFixed(4));
       section.style.setProperty('--film-copy-y', `${(progress * -18).toFixed(2)}px`);
-      section.style.setProperty('--film-scale', (1.045 - progress * 0.045).toFixed(4));
-      section.style.setProperty('--film-video-scale', (1.13 - progress * 0.08).toFixed(4));
+      section.style.setProperty('--film-scale', (1.02 - progress * 0.02).toFixed(4));
+      section.style.setProperty('--film-video-scale', (1.035 - progress * 0.035).toFixed(4));
       section.style.setProperty('--film-video-shift', `${((0.5 - progress) * 1.8).toFixed(3)}%`);
     };
 
@@ -91,7 +91,7 @@ export function CinematicStrip() {
 
   return (
     <div className="film-strip" ref={stripRef}>
-      <video ref={videoRef} muted playsInline preload="metadata" aria-label="Animação da marca Frontier Vision controlada pela rolagem">
+      <video ref={videoRef} muted playsInline preload="auto" aria-label="Animação da marca Frontier Vision controlada pela rolagem">
         <source src="/brand/frontier-motion.mp4" type="video/mp4" />
       </video>
       <div className="film-strip-meta">

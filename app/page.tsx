@@ -49,6 +49,8 @@ export default function Home() {
           </a>
         </header>
 
+        <div className="hero-wave-background" aria-hidden="true"><HeroWave /></div>
+
         <div className="hero-stage">
           <div className="hero-copy">
             <h1 id="hero-title">Um sistema.<span>Toda a sua operação digital.</span></h1>
@@ -56,15 +58,6 @@ export default function Home() {
             <a className="primary-cta" href="#contato">Começar um projeto<ArrowUpRight aria-hidden="true" /></a>
             <span className="hero-signature">Frontier OS // visão do sistema</span>
           </div>
-
-          <figure className="hero-visual">
-            <figcaption className="orbit-caption">Fluxos de presença, aquisição, operação e inteligência conectados pela Frontier OS.</figcaption>
-            <div className="hero-visual-head"><span>Frontier flow // motor do sistema</span><small>01</small></div>
-            <div className="hero-wave-field"><HeroWave /></div>
-            <div className="hero-visual-foot" aria-hidden="true">
-              <span>Fluxo contínuo</span><i><b /></i><small>FOS</small>
-            </div>
-          </figure>
 
           <svg className="hero-flow-overlay" viewBox="0 0 1600 820" preserveAspectRatio="none" aria-hidden="true">
             <path d="M314 486H492C528 486 548 506 548 542V604C548 642 568 662 606 662H792C830 662 850 682 850 720V748H1550" />

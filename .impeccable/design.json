@@ -231,7 +231,7 @@
       {
         "name": "wave-vignette",
         "value": "radial-gradient(ellipse at center, transparent 34%, #050505 100%)",
-        "purpose": "Concentra as ondas dentro da moldura do hero sem criar elevação de cartão."
+        "purpose": "Protege a leitura enquanto as ondas atravessam o campo contínuo do hero sem criar elevação de cartão."
       }
     ],
     "motion": [
@@ -248,7 +248,7 @@
       {
         "name": "hero-reveal",
         "value": "900ms cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Abre a moldura do motor de ondas e preserva o conteúdo estável depois da entrada."
+        "purpose": "Revela suavemente o campo contínuo de ondas atrás da copy e preserva o conteúdo estável depois da entrada."
       },
       {
         "name": "brand-scroll-sequence",
@@ -313,9 +313,9 @@
     {
       "name": "Motor de Ondas",
       "kind": "custom",
-      "description": "Canvas isolado que transforma fluxo operacional em fitas volumétricas e luminosas de marfim, dourado quente e vermelho dentro do hero.",
-      "html": "<figure class=\"ds-wave-frame\"><figcaption>FRONTIER FLOW // MOTOR DO SISTEMA</figcaption><canvas aria-hidden=\"true\"></canvas><footer>FLUXO CONTÍNUO</footer></figure>",
-      "css": ".ds-wave-frame { overflow:hidden; border:1px solid rgb(230 219 205 / 20%); background:#050505; color:var(--frontier-ivory, #e6dbcd); } .ds-wave-frame figcaption,.ds-wave-frame footer { display:flex; align-items:center; min-height:42px; padding:0 18px; border-block:1px solid rgb(230 219 205 / 15%); font:700 .57rem/1.2 var(--font-body, sans-serif); letter-spacing:.14em; text-transform:uppercase; } .ds-wave-frame canvas { display:block; width:100%; height:480px; }"
+      "description": "Canvas em tela cheia que transforma fluxo operacional em fitas volumétricas e luminosas de marfim, dourado quente e vermelho atrás da copy do hero.",
+      "html": "<section class=\"ds-wave-hero\"><canvas aria-hidden=\"true\"></canvas><div><h1>UM SISTEMA. TODA A SUA OPERAÇÃO DIGITAL.</h1><p>Estratégia, tecnologia e execução conectadas.</p></div></section>",
+      "css": ".ds-wave-hero { position:relative; display:grid; align-items:center; min-height:100vh; overflow:hidden; background:#050505; color:var(--frontier-ivory, #e6dbcd); } .ds-wave-hero canvas { position:absolute; inset:0; width:100%; height:100%; } .ds-wave-hero > div { position:relative; z-index:2; max-width:690px; padding:80px; } .ds-wave-hero h1 { margin:0; font:600 clamp(4.7rem,7.4vw,6rem)/.83 var(--font-display, sans-serif); letter-spacing:-.03em; text-transform:uppercase; }"
     },
     {
       "name": "Sequência de Marca",

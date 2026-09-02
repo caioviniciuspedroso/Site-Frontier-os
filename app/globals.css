@@ -227,20 +227,18 @@ a {
 .hero-stage {
   position: relative;
   z-index: 8;
-  display: grid;
-  grid-template-columns: minmax(300px, 0.72fr) minmax(520px, 1.28fr);
+  display: flex;
   align-items: center;
   flex: 1;
-  gap: clamp(42px, 5vw, 86px);
   width: 100%;
-  padding: clamp(44px, 6vh, 72px) 3vw clamp(108px, 12vh, 138px);
+  padding: clamp(80px, 10vh, 132px) 3vw clamp(118px, 14vh, 154px);
 }
 
 .hero-copy {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 620px;
+  max-width: 690px;
 }
 
 .hero-copy h1 {
@@ -291,94 +289,25 @@ a {
   background: rgb(230 219 205 / 30%);
 }
 
-.hero-visual {
-  position: relative;
-  z-index: 2;
-  min-width: 0;
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid rgb(230 219 205 / 20%);
-  background: #050505;
-  animation: hero-frame-arrive 900ms cubic-bezier(0.16, 1, 0.3, 1) 120ms both;
-}
-
-.hero-visual::before,
-.hero-visual::after {
+.hero-wave-background {
   position: absolute;
-  z-index: 4;
-  width: 16px;
-  height: 16px;
-  content: '';
-  pointer-events: none;
-  border-color: rgb(230 219 205 / 58%);
-}
-
-.hero-visual::before {
-  top: 12px;
-  left: 12px;
-  border-top: 1px solid;
-  border-left: 1px solid;
-}
-
-.hero-visual::after {
-  right: 12px;
-  bottom: 12px;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
-}
-
-.hero-visual-head,
-.hero-visual-foot {
-  position: relative;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 42px;
-  padding: 0 18px;
-  color: rgb(230 219 205 / 52%);
-  font-size: 0.57rem;
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.hero-visual-head { border-bottom: 1px solid rgb(230 219 205 / 15%); }
-.hero-visual-foot { gap: 16px; border-top: 1px solid rgb(230 219 205 / 15%); }
-
-.hero-visual-foot i {
-  position: relative;
-  flex: 1;
-  height: 1px;
-  overflow: visible;
-  background: rgb(230 219 205 / 26%);
-}
-
-.hero-visual-foot i::before {
-  position: absolute;
-  top: -3px;
-  left: 38%;
-  width: 7px;
-  height: 7px;
-  content: '';
-  border: 1px solid #d2462e;
-  border-radius: 50%;
-  background: #050505;
-}
-
-.hero-visual-foot b {
-  display: block;
-  width: 38%;
-  height: 1px;
-  background: #d2462e;
-}
-
-.hero-wave-field {
-  position: relative;
-  height: clamp(360px, 42vw, 590px);
+  z-index: 1;
+  inset: 74px 0 76px;
   overflow: hidden;
   isolation: isolate;
+  background: #050505;
+  animation: hero-wave-arrive 900ms cubic-bezier(0.16, 1, 0.3, 1) 120ms both;
+}
+
+.hero-wave-background::after {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  content: '';
+  background:
+    linear-gradient(90deg, rgb(5 5 5 / 76%) 0%, rgb(5 5 5 / 48%) 25%, rgb(5 5 5 / 10%) 52%, transparent 78%),
+    linear-gradient(180deg, rgb(5 5 5 / 24%), transparent 26%, transparent 70%, rgb(5 5 5 / 48%));
+  pointer-events: none;
 }
 
 .hero-flow-overlay {
@@ -404,15 +333,6 @@ a {
   stroke-dasharray: 1900;
   stroke-dashoffset: 1900;
   animation: hero-route-draw 1.35s cubic-bezier(0.16, 1, 0.3, 1) 420ms forwards;
-}
-
-.hero-wave-field::after {
-  position: absolute;
-  z-index: 2;
-  inset: 0;
-  content: '';
-  background: linear-gradient(180deg, rgb(5 5 5 / 18%), transparent 24%, transparent 72%, rgb(5 5 5 / 44%));
-  pointer-events: none;
 }
 
 .hero-wave-canvas {
@@ -1010,8 +930,8 @@ a {
   --film-progress: 0;
   --film-copy-opacity: 1;
   --film-copy-y: 0px;
-  --film-scale: 1.045;
-  --film-video-scale: 1.13;
+  --film-scale: 1.02;
+  --film-video-scale: 1.035;
   --film-video-shift: 0.9%;
   position: relative;
   min-height: 210svh;
@@ -1066,7 +986,9 @@ a {
   inset: 0;
   overflow: hidden;
   height: 100%;
-  background: var(--frontier-red);
+  background:
+    radial-gradient(circle at 78% 50%, rgb(156 49 31 / 88%), rgb(61 18 13 / 72%) 44%, transparent 72%),
+    #050505;
   transform: scale(var(--film-scale));
   transform-origin: center;
   will-change: transform;
@@ -1095,11 +1017,18 @@ a {
 }
 
 .film-strip video {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  max-width: none;
   height: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
   transform: scale(var(--film-video-scale)) translate3d(var(--film-video-shift), 0, 0);
+  transform-origin: center right;
+  filter: contrast(1.045) saturate(1.035);
   will-change: transform;
 }
 
@@ -1463,9 +1392,9 @@ a {
 
 .site-footer > a:last-child svg { width: 16px; height: 16px; }
 
-@keyframes hero-frame-arrive {
-  from { opacity: 0; clip-path: inset(8% 0 8% 9%); transform: translate3d(5vw, 0, 0) scale(0.96); }
-  to { opacity: 1; clip-path: inset(0); transform: translate3d(0, 0, 0) scale(1); }
+@keyframes hero-wave-arrive {
+  from { opacity: 0; transform: scale(1.035); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes hero-route-draw { to { stroke-dashoffset: 0; } }
@@ -1484,8 +1413,6 @@ a {
     width: min(760px, 100%);
     max-width: 720px;
   }
-  .hero-visual { width: 100%; }
-  .hero-wave-field { height: min(62vw, 560px); }
   .hero-flow-overlay { display: none; }
   .hero-footer { grid-template-columns: 1fr auto; }
   .stage-rail { display: none; }
@@ -1536,10 +1463,12 @@ a {
   .hero-copy p { max-width: 38ch; margin-top: 24px; font-size: 0.94rem; }
   .primary-cta { width: 100%; margin-top: 28px; }
   .hero-signature { margin-top: 28px; }
-  .hero-wave-field { height: 320px; }
-  .hero-visual-head,
-  .hero-visual-foot { min-height: 38px; padding-inline: 12px; font-size: 0.5rem; }
-  .hero-visual-foot > span { display: none; }
+  .hero-wave-background { inset: 66px 0; }
+  .hero-wave-background::after {
+    background:
+      linear-gradient(90deg, rgb(5 5 5 / 82%) 0%, rgb(5 5 5 / 48%) 58%, rgb(5 5 5 / 18%) 100%),
+      linear-gradient(180deg, rgb(5 5 5 / 28%), transparent 28%, transparent 68%, rgb(5 5 5 / 54%));
+  }
   .hero-footer { min-height: 66px; padding-inline: 18px; }
   .manifesto,
   .connected-section,
@@ -1618,7 +1547,7 @@ a {
     transition-duration: 0.01ms !important;
   }
 
-  .hero-visual { opacity: 1; transform: none; clip-path: none; }
+  .hero-wave-background { opacity: 1; transform: none; }
   .film-copy { opacity: 1; transform: none; }
   .film-strip,
   .film-strip video { clip-path: none; transform: none; }
