@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { ArrowDown, ArrowUpRight, Check, X } from 'lucide-react';
+import { CommerceSupportGrid } from '@/components/commerce-support-grid';
 import { EcommerceDiagnosticForm } from '@/components/ecommerce-diagnostic-form';
 import styles from './consultoria.module.css';
 
 export const metadata: Metadata = {
   title: 'Consultoria de E-commerce | Frontier Commerce',
   description:
-    'Estratégia e execução para e-commerces que já vendem, mas precisam recuperar constância, margem e capacidade de escala.',
+    'Acelere as vendas do seu e-commerce com mídia, CRO, CRM, criativos e dados trabalhando no mesmo plano.',
   alternates: { canonical: '/consultoria-ecommerce' },
   openGraph: {
-    title: 'Frontier Commerce — Consultoria especializada para e-commerce',
+    title: 'Acelere as vendas do seu e-commerce | Frontier Commerce',
     description:
       'Mídia, CRO, CRM, criativos, calendário comercial, automações e dados trabalhando no mesmo plano.',
     url: '/consultoria-ecommerce',
@@ -119,10 +120,9 @@ export default function EcommerceConsultingPage() {
 
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
-            <p className={styles.signalLabel}>Consultoria especializada para e-commerce</p>
-            <h1 id="commerce-title">Seu e-commerce não precisa de mais ações soltas.</h1>
-            <p className={styles.heroStatement}>Precisa saber o que priorizar para crescer com margem.</p>
-            <p className={styles.heroBody}>Estratégia e execução para operações que já vendem e têm estrutura, mas perderam constância ou encontraram um limite para escalar.</p>
+            <h1 id="commerce-title"><span>Acelere as</span><span>vendas do seu</span><span>e-commerce.</span></h1>
+            <p className={styles.heroStatement}>Sem escalar o caos da operação.</p>
+            <p className={styles.heroBody}>Mídia, CRO, CRM, criativos, calendário e dados no mesmo plano para operações que já vendem, mas precisam recuperar constância e capacidade de escala.</p>
             <div className={styles.heroActions}>
               <a className={styles.primaryCta} href="#diagnostico">Solicitar diagnóstico <ArrowUpRight aria-hidden="true" /></a>
               <a className={styles.textLink} href="#metodo">Conhecer o método <ArrowDown aria-hidden="true" /></a>
@@ -155,6 +155,30 @@ export default function EcommerceConsultingPage() {
         <div className={styles.heroRail}>
           <span>Uma operação. Seis pilares.</span>
           <span>Mídia</span><span>CRO</span><span>CRM</span><span>Dados</span>
+        </div>
+      </section>
+
+      <section className={styles.growthSection} aria-labelledby="growth-title">
+        <div className={styles.growthCopy}>
+          <p className={styles.sectionCode}>O motor da receita</p>
+          <h2 id="growth-title">Vender mais é uma equação. Escalar exige controlar cada variável.</h2>
+          <p>Receita não cresce apenas colocando mais verba em mídia. Ela responde ao volume de sessões, à conversão da loja e ao valor gerado por pedido — sempre dentro da margem que sustenta a operação.</p>
+          <div className={styles.equation} aria-label="Receita é igual a sessões multiplicadas por conversão e ticket médio">
+            <span>Sessões</span><i>×</i><span>Conversão</span><i>×</i><span>Ticket</span><strong>= Receita</strong>
+          </div>
+        </div>
+        <div className={styles.growthEngine} aria-label="Diagrama animado dos fatores de crescimento">
+          <div className={`${styles.orbitRing} ${styles.orbitOuter}`} aria-hidden="true" />
+          <div className={`${styles.orbitRing} ${styles.orbitInner}`} aria-hidden="true" />
+          <div className={styles.engineNode}><small>01</small><strong>Tráfego</strong></div>
+          <div className={styles.engineNode}><small>02</small><strong>Conversão</strong></div>
+          <div className={styles.engineNode}><small>03</small><strong>Ticket</strong></div>
+          <div className={styles.engineNode}><small>04</small><strong>Retenção</strong></div>
+          <div className={styles.engineCore}>
+            <Image src="/brand/frontier-logo.png" alt="" width={94} height={94} />
+            <span>Motor de<br />crescimento</span>
+          </div>
+          <span className={styles.engineSignal} aria-hidden="true" />
         </div>
       </section>
 
@@ -247,6 +271,15 @@ export default function EcommerceConsultingPage() {
         </ol>
       </section>
 
+      <section className={styles.supportSection} aria-labelledby="support-title">
+        <div className={styles.supportHeading}>
+          <p className={styles.sectionCode}>Estrutura para executar</p>
+          <h2 id="support-title">Organização, velocidade e precisão para o seu time avançar.</h2>
+          <p>O método não vive apenas em reuniões. Você acompanha decisões, tarefas e aprendizados em uma rotina construída para manter a operação em movimento.</p>
+        </div>
+        <CommerceSupportGrid />
+      </section>
+
       <section className={styles.visibilitySection} aria-labelledby="visibility-title">
         <div className={styles.visibilityBoard}>
           <div className={styles.boardHeader}><span>EXEMPLO DE ROTINA OPERACIONAL</span><span>SEMANA ATUAL</span></div>
@@ -280,6 +313,20 @@ export default function EcommerceConsultingPage() {
             <ul>{notFit.map((item) => <li key={item}><X aria-hidden="true" />{item}</li>)}</ul>
           </div>
         </div>
+      </section>
+
+      <section className={styles.roadmapSection} aria-labelledby="roadmap-title">
+        <div className={styles.roadmapHeading}>
+          <p className={styles.sectionCode}>Como começamos</p>
+          <h2 id="roadmap-title">Da primeira conversa ao início da operação.</h2>
+          <p>Um processo direto para entender o momento do negócio, confirmar aderência e começar com as prioridades certas.</p>
+        </div>
+        <ol className={styles.roadmap}>
+          <li><span>01</span><strong>Pedido de diagnóstico</strong><p>Você compartilha o contexto e o principal desafio.</p></li>
+          <li><span>02</span><strong>Conversa estratégica</strong><p>Lemos a operação e aprofundamos o gargalo.</p></li>
+          <li><span>03</span><strong>Plano e proposta</strong><p>Definimos escopo, prioridades e forma de trabalho.</p></li>
+          <li><span>04</span><strong>Onboarding</strong><p>Acessos, dados, calendário e primeiro ciclo de execução.</p></li>
+        </ol>
       </section>
 
       <section className={styles.contactSection} id="diagnostico" aria-labelledby="diagnostic-title">

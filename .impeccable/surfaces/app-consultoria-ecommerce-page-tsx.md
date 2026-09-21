@@ -2,7 +2,7 @@
 version: 1
 slug: "app-consultoria-ecommerce-page-tsx"
 primary_target: "app/consultoria-ecommerce/page.tsx"
-related_targets: ["app/consultoria-ecommerce/consultoria.module.css","components/ecommerce-diagnostic-form.tsx"]
+related_targets: ["app/consultoria-ecommerce/consultoria.module.css","components/ecommerce-diagnostic-form.tsx","components/commerce-support-grid.tsx"]
 ---
 
 # Consultoria de E-commerce
@@ -16,6 +16,7 @@ related_targets: ["app/consultoria-ecommerce/consultoria.module.css","components
 - Cadência: suporte diário, leitura e priorização semanal, reunião estratégica mensal.
 - Prova disponível: profundidade e concretude do processo. Cases, marcas e números serão adicionados quando o cliente fornecer materiais verificáveis.
 - Direção: manual operacional Frontier mais informativo e contido, com campos preto, marfim e vermelho, grids editoriais, linhas técnicas e animações leves que explicam fluxo.
-- Momento memorável: mapa animado no hero conectando oferta, mídia, loja e CRM ao núcleo Frontier e à rota margem, conversão e retenção.
+- Hero aprovado: “Acelere as vendas do seu e-commerce. Sem escalar o caos da operação.”
+- Momentos memoráveis: mapa animado no hero; motor radial que explica sessões × conversão × ticket; brilho responsivo nos recursos de acompanhamento.
 - Ação principal: solicitar diagnóstico pelo formulário de qualificação; destino direto de contato ainda não fornecido.
 - Restrições: não inventar números, cases, garantias, depoimentos ou marcas; preservar performance e `prefers-reduced-motion`.
