@@ -15,6 +15,19 @@ const body = Manrope({
 });
 
 export const metadata: Metadata = {
+ icons: {
+    icon: [
+      {
+        url: '/brand/frontier-logo.png',
+        type: 'image/png',
+      },
+    ],
+    shortcut: '/brand/frontier-logo.png',
+    apple: '/brand/frontier-logo.png',
+  },
+
+  metadataBase: new URL('https://frontier-os.contato-frontiervisi.chatgpt.site'),
+  
   metadataBase: new URL('https://frontier-os.contato-frontiervisi.chatgpt.site'),
   title: 'Frontier OS — Toda a sua operação digital em um só sistema',
   description:
