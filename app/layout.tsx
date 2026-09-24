@@ -27,8 +27,6 @@ export const metadata: Metadata = {
   },
 
   metadataBase: new URL('https://frontier-os.contato-frontiervisi.chatgpt.site'),
-  
-  metadataBase: new URL('https://frontier-os.contato-frontiervisi.chatgpt.site'),
   title: 'Frontier OS — Toda a sua operação digital em um só sistema',
   description:
     'Sites premium, CRM, IA, automações, sistemas, mídia e dados conectados para sua empresa operar e crescer melhor.',

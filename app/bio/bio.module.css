@@ -1,0 +1,83 @@
+.page {
+  --bio-red: #9c311f;
+  --bio-ivory: #e6dbcd;
+  --bio-signal: #d2462e;
+  min-height: 100svh;
+  padding: 36px 20px;
+  background: #050505;
+  color: var(--bio-ivory);
+}
+.page a { text-decoration: none; }
+.column { width: min(100%, 520px); margin: 0 auto; background: #0b0b0b; }
+.profile { position: relative; height: 500px; isolation: isolate; overflow: hidden; }
+.portrait { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 28%; }
+.profile::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  content: '';
+  pointer-events: none;
+  background: linear-gradient(180deg, rgb(5 5 5 / 45%), transparent 24%, transparent 47%, rgb(11 11 11 / 65%) 72%, #0b0b0b 100%);
+}
+.brand { position: absolute; z-index: 2; top: 24px; left: 26px; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; }
+.brand img { width: 28px; height: 28px; }
+.brand span { font-size: 0.75rem; font-weight: 750; letter-spacing: 0.13em; text-transform: uppercase; }
+.identity { position: absolute; z-index: 2; bottom: 12px; left: 28px; right: 28px; text-align: center; }
+.identity h1 { margin: 0; font-family: var(--font-display), sans-serif; font-size: clamp(3.6rem, 13vw, 4.75rem); font-weight: 600; line-height: 0.92; letter-spacing: -0.03em; text-transform: uppercase; }
+.identity h1 span { color: #fff8ef; }
+.identity p { margin: 18px 0 0; color: #e6dbcd; font-size: 1rem; line-height: 1.6; }
+.links { display: grid; gap: 16px; padding: 24px 24px 0; }
+.welcome { margin: 0 0 7px; text-align: center; color: #fff8ef; font-size: 0.875rem; line-height: 1.6; }
+.welcome span { color: #b9ad9e; }
+.banner { position: relative; display: block; min-height: 235px; overflow: hidden; isolation: isolate; border: 1px solid rgb(230 219 205 / 26%); border-radius: 12px; transition: border-color 220ms ease; }
+.banner:hover { border-color: var(--bio-ivory); }
+.cardCopy { position: relative; z-index: 3; display: flex; align-items: flex-start; flex-direction: column; padding: 24px; }
+.service { display: inline-flex; align-items: center; gap: 8px; font-size: 0.75rem; line-height: 1.5; font-weight: 650; }
+.service svg { width: 18px; height: 18px; }
+.cardCopy > strong { display: block; margin-top: 18px; font-family: var(--font-display), sans-serif; font-size: clamp(2.2rem, 8.2vw, 2.75rem); font-weight: 600; line-height: 0.94; letter-spacing: -0.02em; text-transform: uppercase; }
+.cardCopy em { color: #fff8ef; font-style: normal; }
+.description { max-width: 24ch; margin-top: 13px; color: var(--bio-ivory); font-size: 0.875rem; line-height: 1.5; }
+.action { display: inline-flex; align-items: center; gap: 12px; min-height: 42px; margin-top: 18px; font-size: 0.8125rem; font-weight: 700; }
+.action svg { width: 17px; height: 17px; transition: transform 220ms ease; }
+.banner:hover .action svg { transform: translate(3px, -3px); }
+.commerce { background: #491b14; }
+.cardPortrait { position: absolute; inset: 0 0 0 auto; width: 50%; height: 100%; object-fit: cover; object-position: 52% 22%; z-index: 0; transition: transform 500ms ease; }
+.commerce::after { position: absolute; z-index: 1; inset: 0; content: ''; background: linear-gradient(90deg, #491b14 28%, rgb(73 27 20 / 88%) 48%, rgb(73 27 20 / 10%) 85%); }
+.commerce .description { max-width: 22ch; }
+.commerce .action { padding: 0 12px; background: var(--bio-red); color: #fff8ef; }
+.commerce:hover .cardPortrait { transform: scale(1.025); }
+.technology { background: #080808; }
+.atmosphere { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 66% 50%; opacity: 0.64; }
+.technology::after { position: absolute; z-index: 1; inset: 0; content: ''; background: linear-gradient(90deg, rgb(5 5 5 / 96%), rgb(5 5 5 / 55%) 60%, rgb(5 5 5 / 6%)); }
+.technology .cardCopy em { color: #ec7559; }
+.contact { display: grid; grid-template-columns: 24px 1fr 18px; align-items: center; gap: 15px; min-height: 102px; padding: 18px 20px; border: 1px solid rgb(230 219 205 / 26%); border-radius: 12px; transition: background 220ms ease; }
+.contact:hover { background: #181411; }
+.contact > svg { width: 24px; height: 24px; color: #ec7559; }
+.contact > svg:last-child { width: 18px; }
+.contact strong { display: block; color: #fff8ef; font-size: 0.9375rem; line-height: 1.4; }
+.contact span span { display: block; margin-top: 6px; color: #b9ad9e; font-size: 0.8125rem; line-height: 1.5; }
+.footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; padding: 30px 20px; color: #b9ad9e; font-size: 0.75rem; }
+.footer img { width: 22px; height: 22px; }
+.footer a { display: inline-flex; align-items: center; justify-content: center; gap: 6px; width: 100%; min-height: 44px; color: var(--bio-ivory); }
+.footer svg { width: 13px; height: 13px; }
+.page a:focus-visible { outline: 2px solid #fff8ef; outline-offset: 4px; }
+@media (max-width: 560px) {
+  .page { padding: 0; }
+  .profile { height: 460px; }
+  .links { padding-inline: 18px; }
+  .cardCopy { padding: 22px; }
+}
+@media (max-width: 360px) {
+  .profile { height: 415px; }
+  .brand { left: 20px; }
+  .identity { left: 18px; right: 18px; }
+  .identity h1 { font-size: 3.35rem; }
+  .links { padding-inline: 14px; }
+  .cardCopy { padding: 18px; }
+  .cardCopy > strong { font-size: 2.2rem; }
+  .contact { padding: 16px; gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .banner, .cardPortrait, .action svg, .contact { transition: none; }
+  .commerce:hover .cardPortrait, .banner:hover .action svg { transform: none; }
+}
